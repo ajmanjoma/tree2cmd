@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: tree2cmd
+Version: 0.1.0
+Summary: Convert ChatGPT/LLM-style folder tree text to real files and folders
+Home-page: https://github.com/ajmanjoma/tree2cmd
+Author: AnJoMa
+Author-email: antonyjosephmathew1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary

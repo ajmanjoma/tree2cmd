@@ -1,0 +1,152 @@
+Great — your tool is working as intended!
+Given this input:
+
+```text
+📁 Project/
+├── src/
+│   └── main.py
+└── README.md
+```
+
+And this output:
+
+```bash
+mkdir -p "Project/"
+mkdir -p "Project/src/"
+touch "Project/src/main.py"
+touch "Project/README.md"
+```
+
+✅ Everything is correctly interpreted, and the tree structure is recreated as shell commands.
+
+---
+
+## ✅ Basic Workflow of `tree2cmd`
+
+Here's a simple breakdown of **how it works from start to end**:
+
+---
+
+### 1. **Input Parsing**
+
+* You provide a tree-like text input (either from file or stdin).
+* Example format:
+
+  ```text
+  📁 Project/
+  ├── src/
+  │   └── main.py
+  └── README.md
+  ```
+* It supports emojis and visual tree characters, but also plain indented text.
+
+---
+
+### 2. **Line Normalization**
+
+* Removes emojis and special tree characters (e.g., `📁`, `├──`, `└──`, `│`).
+* Removes trailing slashes (`/`) or comments (`# this is a file`).
+* Converts the line to a clean name like `"Project"` or `"main.py"`.
+
+---
+
+### 3. **Indentation Detection**
+
+* Counts how far a line is indented to understand the **depth** in the tree.
+* More indent = deeper in directory.
+* Keeps a `stack` of current folder path.
+
+---
+
+### 4. **Folder or File?**
+
+* Determines if each entry is a folder or file:
+
+  * Ends in `/` → folder
+  * Has file extension → file
+  * Next line is more indented → folder
+
+---
+
+### 5. **Command Generation**
+
+* Based on above:
+
+  * `mkdir -p path/to/dir` for folders
+  * `touch path/to/file` for files
+* Ensures parent folders are created before files
+* Escapes special shell characters in file/folder names
+
+---
+
+### 6. **Execution (optional)**
+
+* If you run with `--run`, the tool **executes** each shell command using `os.system()`.
+* Without `--run`, it just prints the shell commands (dry-run).
+
+---
+
+### 7. **Optional Save**
+
+* If you use `--save script.sh`, it writes all commands into a shell script file.
+
+---
+
+## 🛠️ Typical Usage Examples
+
+### 1. View shell commands (dry-run)
+
+```bash
+venv/bin/tree2cmd sample.txt
+```
+
+### 2. Execute and create files/folders
+
+```bash
+venv/bin/tree2cmd sample.txt --run
+```
+
+### 3. Save to shell script
+
+```bash
+venv/bin/tree2cmd sample.txt --save generate.sh
+```
+
+### 4. Use input from stdin
+
+```bash
+cat sample.txt | venv/bin/tree2cmd --stdin
+```
+
+---
+
+## 📦 Workflow Summary Diagram
+
+```
+[ Tree Input File ]
+        │
+        ▼
+[ Parse + Normalize Lines ]
+        │
+        ▼
+[ Detect Indentation + Nesting ]
+        │
+        ▼
+[ Classify → Folder or File ]
+        │
+        ▼
+[ Generate mkdir / touch Commands ]
+        │
+   ┌────┴────┐
+   ▼         ▼
+Dry-run    --run
+(Print)   (Execute via os.system)
+```
+
+---
+
+Let me know if you'd like to:
+
+* Add support for custom file templates (e.g., default content inside `main.py`)
+* Generate JSON or YAML from the tree
+* Build a web version (drag & drop tree → download .sh file)
