@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tree2cmd',
-    version='0.1.0',
+    version='0.1.1',
     description='Convert ChatGPT/LLM-style folder tree text to real files and folders',
     long_description=open("README.md").read() if os.path.exists("README.md") else "",
     long_description_content_type='text/markdown',

@@ -1,190 +1,102 @@
-Absolutely! I've cleaned up duplicates and improved the flow for clarity and conciseness, while keeping all the important details. Here’s the polished, non-redundant, and well-structured `README.md` for your `tree2cmd` project:
-
----
-
-````markdown
 # tree2cmd
 
-> Convert tree-style directory text into shell commands (`mkdir` and `touch`).
-
-`tree2cmd` is a CLI tool that parses a textual directory tree structure—including emojis and common tree characters—and generates shell commands to recreate the corresponding directories and files on your system.
+Convert tree-style directory text into shell commands (`mkdir` and `touch`).
 
 ---
 
-## 🚀 Features
-
-- Parse tree-like folder structures from file or standard input.
-- Supports emojis and visual tree characters (`├──`, `│`, `└──`, etc.).
-- Heuristically determines folders vs. files.
-- Generates safe, escaped shell commands (`mkdir -p` for folders, `touch` for files).
-- Optionally executes commands to create files/folders.
-- Save generated commands into a shell script.
-- Handles indentation-based nesting with configurable indent width.
-
----
-
-## 📦 Installation
-
-Create a Python virtual environment and install dependencies:
+## Installation
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip setuptools wheel
-pip install -r requirements.txt
-````
-
-Alternatively, build and install locally:
-
-```bash
-python setup.py sdist bdist_wheel
-pip install dist/tree2cmd-*.whl
+pip install tree2cmd
 ```
 
 ---
 
-## ⚙️ Usage Examples
+## Features
 
-### 1. Preview shell commands (dry-run):
-
-```bash
-venv/bin/tree2cmd sample.txt
-```
-
-### 2. Execute commands to create files and folders:
-
-```bash
-venv/bin/tree2cmd sample.txt --run
-```
-
-### 3. Save commands to a shell script:
-
-```bash
-venv/bin/tree2cmd sample.txt --save generate.sh
-```
-
-### 4. Read input from standard input:
-
-```bash
-cat sample.txt | venv/bin/tree2cmd --stdin
-```
+- Parse tree-like folder structures from text files or standard input
+- Support emojis and common tree characters (`├──`, `│`, `└──`, etc.)
+- Heuristically detect folders vs. files (folder if ends with `/` or indentation implies children)
+- Generate safe shell commands: `mkdir -p` for directories, `touch` for files
+- Optionally execute commands or save them into a shell script
+- Handle indentation-based nesting with configurable indent width (default: 2 spaces)
+- Properly escape special shell characters inside quotes
+- Lightweight and dependency-free, compatible with Python 3.7+
 
 ---
 
-## 📖 Example
+## Usage
 
-Given this input:
+Run `tree2cmd` from the command line:
 
-```text
-📁 Project/
-├── src/
-│   └── main.py
-└── README.md
-```
+- **Dry-run (print commands)**:
 
-The output commands are:
+  ```bash
+  tree2cmd <input_file>
+  ```
 
-```bash
-mkdir -p "Project/"
-mkdir -p "Project/src/"
-touch "Project/src/main.py"
-touch "Project/README.md"
-```
+- **Execute commands to create files and folders**:
 
-✅ The tree is correctly interpreted and recreated as shell commands.
+  ```bash
+  tree2cmd <input_file> --run
+  ```
 
----
+- **Save generated commands to a shell script**:
 
-## ✅ How `tree2cmd` Works
+  ```bash
+  tree2cmd <input_file> --save <script.sh>
+  ```
 
-### 1. Input Parsing
+- **Read input from standard input**:
 
-Reads a tree-like text structure from a file or stdin. Supports emojis and tree characters as well as plain indented text.
+  ```bash
+  cat structure.txt | tree2cmd --stdin
+  ```
 
-### 2. Line Normalization
-
-Strips emojis, special tree characters (like `📁`, `├──`, `│`), trailing slashes, and inline comments to get clean file or folder names.
-
-### 3. Indentation Detection
-
-Determines nesting depth by counting indentation, maintaining a stack of parent directories.
-
-### 4. Folder or File Detection
-
-* Names ending with `/` are folders.
-* Names with extensions are files.
-* If the next line is more indented, current line is considered a folder.
-
-### 5. Command Generation
-
-Generates shell commands:
-
-* `mkdir -p` for directories (creates parent folders as needed).
-* `touch` for files.
-
-Special shell characters in names are safely escaped.
-
-### 6. Execution (optional)
-
-If `--run` is specified, commands are executed directly; otherwise, they are printed.
-
-### 7. Saving Commands
-
-If `--save <file>` is used, commands are written into a shell script.
+Adjust indentation width with `--indent-width` if your input uses non-standard spacing.
 
 ---
 
-## 🛠 Workflow Diagram
+## FAQ & Troubleshooting
 
-```
-[ Tree Input File ]
-        │
-        ▼
-[ Parse & Normalize Lines ]
-        │
-        ▼
-[ Detect Indentation & Nesting ]
-        │
-        ▼
-[ Classify as Folder or File ]
-        │
-        ▼
-[ Generate mkdir / touch Commands ]
-        │
-   ┌────┴────┐
-   ▼         ▼
-Dry-run    --run
-(Print)   (Execute)
-```
+- **Does this work on Windows CMD or PowerShell?**  
+  Generated commands target bash shells (Linux/macOS/WSL). Windows native shells are not supported.
+
+- **Special characters cause errors?**  
+  Input paths are quoted and escaped, but ensure input format is clean and consistent.
+
+- **Indentation detection issues?**  
+  Verify your input uses consistent indentation and set `--indent-width` accordingly.
 
 ---
 
-## 🛠 Development & Testing
+## Contributing
 
-Run unit tests:
+Contributions are welcome! To contribute:
 
-```bash
-python -m unittest discover tests
-```
+1. Fork the repository
+2. Clone it locally
+3. Run tests:
 
-Preview commands during development:
+   ```bash
+   python -m unittest discover tests
+   ```
+4. Implement your changes and commit
+5. Push and open a Pull Request
 
-```bash
-make venv install
-make preview FILE=sample.txt
-```
-
----
-
-## 🤝 Contributing
-
-Contributions and bug reports are welcome! Please open issues or pull requests on GitHub.
+Ideas for future enhancements: Windows shell support, custom file templates, GUI frontend.
 
 ---
 
-## 📜 License
+## Disclaimer
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Experimental project — use at your own risk. Always review generated commands before execution. No liability for data loss.
 
 ---
 
+## Author
+
+AnJoMa — [antonyjosephmathew1@gmail.com](mailto:antonyjosephmathew1@gmail.com)  
+GitHub: [https://github.com/ajmanjoma/tree2cmd](https://github.com/ajmanjoma/tree2cmd)
+
+---
