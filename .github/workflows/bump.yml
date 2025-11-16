@@ -54,4 +54,4 @@ jobs:
           git push --tags
 
       - name: Summary
-        run: echo "🎉 Version bump type: ${{ steps.bump.outputs.type }}"
+        run: echo "Version bump type: ${{ steps.bump.outputs.type }}"
