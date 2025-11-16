@@ -9,10 +9,7 @@ permissions:
 
 jobs:
   bump:
-    if: >
-      contains(github.event.head_commit.message, '#bump-patch') ||
-      contains(github.event.head_commit.message, '#bump-minor') ||
-      contains(github.event.head_commit.message, '#bump-major')
+    if: "contains(github.event.head_commit.message, '#bump-patch') || contains(github.event.head_commit.message, '#bump-minor') || contains(github.event.head_commit.message, '#bump-major')"
     runs-on: ubuntu-latest
 
     steps:
@@ -35,18 +32,17 @@ jobs:
         run: |
           set -e
           MSG="${{ github.event.head_commit.message }}"
-
           echo "Commit message: $MSG"
 
           if echo "$MSG" | grep -q "#bump-major"; then
             echo "type=major" >> $GITHUB_OUTPUT
-            bump2version major --allow-dirty --message "MAJOR: Version bumped to {new_version} [CI Auto]"
+            bump2version major --allow-dirty --message "🔺 MAJOR: Version bumped to {new_version} [CI Auto]"
           elif echo "$MSG" | grep -q "#bump-minor"; then
             echo "type=minor" >> $GITHUB_OUTPUT
-            bump2version minor --allow-dirty --message "MINOR: Version bumped to {new_version} [CI Auto]"
+            bump2version minor --allow-dirty --message "🔸 MINOR: Version bumped to {new_version} [CI Auto]"
           else
             echo "type=patch" >> $GITHUB_OUTPUT
-            bump2version patch --allow-dirty --message "PATCH: Version bumped to {new_version} [CI Auto]"
+            bump2version patch --allow-dirty --message "🔹 PATCH: Version bumped to {new_version} [CI Auto]"
           fi
 
       - name: Push updated version + tags
