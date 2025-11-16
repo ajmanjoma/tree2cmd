@@ -32,7 +32,7 @@
 
   <!-- GitHub Actions: Tests -->
   <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/python_tests.yml">
-    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml/badge.svg" alt="GitHub Tests Status">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/python_tests.yml/badge.svg" alt="GitHub Tests Status">
   </a>
 
   <!-- GitHub Actions: TestPyPI -->
