@@ -2,17 +2,55 @@
 # 📘 tree2cmd
 
 
-
 ### Convert text-based directory trees into real folders and files.
 
-[![PyPI Version](https://img.shields.io/pypi/v/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Tests](https://img.shields.io/badge/tests-100%25-success)
-![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-green)
-[![Tests](https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml/badge.svg)](https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml)
+<p align="center">
 
-![Downloads](https://img.shields.io/pypi/dm/tree2cmd.svg)
+  <!-- PyPI -->
+  <a href="https://pypi.org/project/tree2cmd/">
+    <img src="https://img.shields.io/pypi/v/tree2cmd.svg" alt="PyPI Version">
+  </a>
+
+  <!-- Python Versions -->
+  <a href="https://pypi.org/project/tree2cmd/">
+    <img src="https://img.shields.io/pypi/pyversions/tree2cmd.svg" alt="Python Versions">
+  </a>
+
+  <!-- License -->
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License">
+  </a>
+
+  <!-- Tests 100% -->
+  <img src="https://img.shields.io/badge/tests-100%25-success" alt="Tests 100%">
+
+  <!-- Platform -->
+  <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos-green" alt="Platforms">
+
+  <!-- Downloads -->
+  <img src="https://img.shields.io/pypi/dm/tree2cmd.svg" alt="PyPI Downloads">
+
+  <!-- GitHub Actions: Tests -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml/badge.svg" alt="GitHub Tests Status">
+  </a>
+
+  <!-- GitHub Actions: TestPyPI -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml/badge.svg" alt="Publish to TestPyPI">
+  </a>
+
+  <!-- GitHub Actions: PyPI Publish -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/publish.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/publish.yml/badge.svg" alt="Publish to PyPI">
+  </a>
+
+  <!-- GitHub Actions: Auto Bump -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/bump.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/bump.yml/badge.svg" alt="Auto Version Bump">
+  </a>
+
+</p>
 
 ---
 
