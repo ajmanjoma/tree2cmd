@@ -16,26 +16,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository (with full history + tags)
+        uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Git identity
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install bump2version
         run: pip install bump2version
 
-      - name: Bump Version Based on Commit Message
+      - name: Determine bump type & run bump2version
+        id: bump
         run: |
-          if echo "${{ github.event.head_commit.message }}" | grep -q "#bump-major"; then
-            bump2version major
-          elif echo "${{ github.event.head_commit.message }}" | grep -q "#bump-minor"; then
-            bump2version minor
+          set -e
+          MSG="${{ github.event.head_commit.message }}"
+
+          echo "📝 Commit message received: $MSG"
+
+          if echo "$MSG" | grep -q "#bump-major"; then
+            echo "type=major" >> $GITHUB_OUTPUT
+            bump2version major --allow-dirty --message "🔺 MAJOR: Version bumped to {new_version} [CI Auto]"
+          elif echo "$MSG" | grep -q "#bump-minor"; then
+            echo "type=minor" >> $GITHUB_OUTPUT
+            bump2version minor --allow-dirty --message "🔸 MINOR: Version bumped to {new_version} [CI Auto]"
           else
-            bump2version patch
+            echo "type=patch" >> $GITHUB_OUTPUT
+            bump2version patch --allow-dirty --message "🔹 PATCH: Version bumped to {new_version} [CI Auto]"
           fi
 
-          git push --follow-tags
+      - name: Push version bump commit + tags
+        run: |
+          git push
+          git push --tags
+
+      - name: Print bump summary
+        run: |
+          echo "🎉 Auto version bump complete!"
+          echo "🔧 Type: ${{ steps.bump.outputs.type }}"
