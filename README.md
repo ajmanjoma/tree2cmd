@@ -31,7 +31,7 @@
   <img src="https://img.shields.io/pypi/dm/tree2cmd.svg" alt="PyPI Downloads">
 
   <!-- GitHub Actions: Tests -->
-  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml">
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/python_tests.yml">
     <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml/badge.svg" alt="GitHub Tests Status">
   </a>
 
