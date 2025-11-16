@@ -1,3 +1,5 @@
 make test > ./tests/output.txt 2>&1 
 gh run list
-gh run view ** --log > full_logs.txt
+gh run view 19408359063 --log > full_logs.txt
+
+

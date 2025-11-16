@@ -9,50 +9,50 @@ permissions:
 
 jobs:
   bump:
-    if: |
+    if: >
       contains(github.event.head_commit.message, '#bump-patch') ||
       contains(github.event.head_commit.message, '#bump-minor') ||
       contains(github.event.head_commit.message, '#bump-major')
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository (full history + tags)
+      - name: Checkout (full history + tags)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set Git identity
+      - name: Configure Git Author
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install bump2version
         run: pip install bump2version
 
-      - name: Determine bump type & bump version
+      - name: Determine bump type and bump version
         id: bump
         run: |
           set -e
           MSG="${{ github.event.head_commit.message }}"
-          echo "📝 Commit message: $MSG"
+
+          echo "Commit message: $MSG"
 
           if echo "$MSG" | grep -q "#bump-major"; then
             echo "type=major" >> $GITHUB_OUTPUT
-            bump2version major --allow-dirty --message 'MAJOR: Version bumped to {new_version} [CI Auto]'
+            bump2version major --allow-dirty --message "MAJOR: Version bumped to {new_version} [CI Auto]"
           elif echo "$MSG" | grep -q "#bump-minor"; then
             echo "type=minor" >> $GITHUB_OUTPUT
-            bump2version minor --allow-dirty --message 'MINOR: Version bumped to {new_version} [CI Auto]'
+            bump2version minor --allow-dirty --message "MINOR: Version bumped to {new_version} [CI Auto]"
           else
             echo "type=patch" >> $GITHUB_OUTPUT
-            bump2version patch --allow-dirty --message 'PATCH: Version bumped to {new_version} [CI Auto]'
+            bump2version patch --allow-dirty --message "PATCH: Version bumped to {new_version} [CI Auto]"
           fi
 
-      - name: Push changes
+      - name: Push updated version + tags
         run: |
           git push
           git push --tags
 
-      - name: Summary
-        run: |
-          echo "🎉 Version bump type: ${{ steps.bump.outputs.type }}"
+      - name: Workflow Summary
+        run: echo "Version bump completed: ${{ steps.bump.outputs.type }}"
