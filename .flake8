@@ -6,3 +6,7 @@ exclude =
     build,
     dist,
     .venv
+
+extend-ignore = 
+    E203,
+    W503
