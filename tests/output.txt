@@ -1,0 +1,26 @@
+.venv/bin/python -m unittest discover -s tests -p "test*.py" -v
+test_ascii_multiple_root (test_ascii_tree.TestAsciiTree) ... ok
+test_ascii_vs_struct_equivalence (test_ascii_tree.TestAsciiTree) ... ok
+test_basic_ascii_tree (test_ascii_tree.TestAsciiTree) ... ok
+test_deep_ascii_tree (test_ascii_tree.TestAsciiTree) ... ok
+test_emoji_ascii_tree (test_ascii_tree.TestAsciiTree) ... ok
+test_incomplete_ascii_tree (test_ascii_tree.TestAsciiTree) ... ok
+test_basic_tree (test_cli.TestCLI) ... ok
+test_empty (test_cli.TestCLI) ... ok
+test_mixed_indentation (test_cli.TestCLI) ... ok
+test_multiple_root_items (test_cli.TestCLI) ... ok
+test_single_file (test_cli.TestCLI) ... ok
+test_single_folder (test_cli.TestCLI) ... ok
+test_with_emojis (test_cli.TestCLI) ... ok
+test_full_pipeline (test_integration.TestIntegration) ... ok
+test_reverse_tree_count (test_integration.TestIntegration) ... ok
+test_clean_name_basic (test_parser.TestParser) ... ok
+test_detect_indent (test_parser.TestParser) ... ok
+test_empty_input (test_parser.TestParser) ... ok
+test_parse_simple_tree (test_parser.TestParser) ... ok
+test_parse_with_emojis (test_parser.TestParser) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.003s
+
+OK

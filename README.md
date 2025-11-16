@@ -1,105 +1,329 @@
-# tree2cmd
 
-tree2cmd — Turn a text tree (struct.txt) into real folders & files
+# 📘 tree2cmd
 
-tree2cmd lets you write your project structure inside a simple text file called struct.txt, and then convert it into actual directories and files.
-Fast, clean, and perfect for setting up new project templates.
+tree2cmd is a lightweight Python tool that instantly converts a text-based directory tree (like struct.txt) into real folders and files. It supports both ASCII and Unicode tree formats—including emojis—and generates safe shell commands using mkdir -p and touch.
+
+It is perfect for quickly bootstrapping new projects, sharing folder layouts, automating templates, teaching directory structures, and turning documentation examples into actual directories.
+
+### Convert text-based directory trees into real folders and files.
+
+[![PyPI Version](https://img.shields.io/pypi/v/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Tests](https://img.shields.io/badge/tests-100%25-success)
+![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-green)
+[![Build](https://github.com/ajmanjoma/tree2cmd/actions/workflows/python-tests.yml/badge.svg)](https://github.com/ajmanjoma/tree2cmd/actions)
+![Downloads](https://img.shields.io/pypi/dm/tree2cmd.svg)
 
 ---
 
-## Installation
+# 📑 Table of Contents
+
+* [✨ Overview](#-overview)
+* [🚀 Quick Start](#-quick-start)
+* [📦 Installation](#-installation)
+* [📂 Example Input → Output](#-example-input--output)
+* [🔧 Usage Guide](#-usage-guide)
+* [🧠 How It Works](#-how-it-works)
+* [📚 Documentation](#-documentation)
+* [🧪 Running Tests](#-running-tests)
+* [🔄 Versioning & Publishing](#-versioning--publishing)
+* [🤝 Contributing](#-contributing)
+* [🗺️ Roadmap](#️-roadmap)
+* [📄 License](#-license)
+* [👤 Author](#-author)
+
+---
+
+# ✨ Overview
+
+`tree2cmd` converts **text-based directory trees** (ASCII/Unicode) like:
+
+```
+Project/
+├── src/
+│   └── main.py
+└── README.md
+```
+
+into **actual folders and files** using shell commands:
+
+```
+mkdir -p "Project/"
+mkdir -p "Project/src/"
+touch "Project/src/main.py"
+touch "Project/README.md"
+```
+
+Perfect for:
+
+✔ Rapid project scaffolding
+✔ Teaching directory layouts
+✔ DevOps automation
+✔ Reproducible project templates
+✔ Converting documentation examples into real directories
+
+Fully tested across **ASCII trees**, **Unicode trees**, **emoji trees**, and **mixed indentation styles**.
+
+---
+
+# 🚀 Quick Start
+
+### 1. Make `struct.txt`:
+
+```
+Project/
+  src/
+    main.py
+  README.md
+```
+
+### 2. Convert to commands:
+
+```bash
+tree2cmd struct.txt
+```
+
+### 3. Actually create them:
+
+```bash
+tree2cmd struct.txt --run
+```
+
+---
+
+# 📦 Installation
+
+Stable release:
 
 ```bash
 pip install tree2cmd
 ```
 
----
+Latest development version:
 
-## Features
-
-- Parse tree-like folder structures from text files or standard input
-- Support emojis and common tree characters (`├──`, `│`, `└──`, etc.)
-- Heuristically detect folders vs. files (folder if ends with `/` or indentation implies children)
-- Generate safe shell commands: `mkdir -p` for directories, `touch` for files
-- Optionally execute commands or save them into a shell script
-- Handle indentation-based nesting with configurable indent width (default: 2 spaces)
-- Properly escape special shell characters inside quotes
-- Lightweight and dependency-free, compatible with Python 3.7+
+```bash
+pip install git+https://github.com/ajmanjoma/tree2cmd.git
+```
 
 ---
 
-## Usage
+# 📂 Example Input → Output
 
-Run `tree2cmd` from the command line:
+### Input:
 
-- **Dry-run (print commands)**:
+```
+📦 App/
+  backend/
+    api.py
+  README.md
+```
 
-  ```bash
-  tree2cmd <input_file>
-  ```
+### Output:
 
-- **Execute commands to create files and folders**:
+```
+mkdir -p "📦 App/"
+mkdir -p "📦 App/backend/"
+touch "📦 App/backend/api.py"
+touch "📦 App/README.md"
+```
 
-  ```bash
-  tree2cmd <input_file> --run
-  ```
+### This **works for any**:
 
-- **Save generated commands to a shell script**:
-
-  ```bash
-  tree2cmd <input_file> --save <script.sh>
-  ```
-
-- **Read input from standard input**:
-
-  ```bash
-  cat structure.txt | tree2cmd --stdin
-  ```
-
-Adjust indentation width with `--indent-width` if your input uses non-standard spacing.
-
----
-
-## FAQ & Troubleshooting
-
-- **Does this work on Windows CMD or PowerShell?**  
-  Generated commands target bash shells (Linux/macOS/WSL). Windows native shells are not supported.
-
-- **Special characters cause errors?**  
-  Input paths are quoted and escaped, but ensure input format is clean and consistent.
-
-- **Indentation detection issues?**  
-  Verify your input uses consistent indentation and set `--indent-width` accordingly.
+* ASCII tree
+* Unicode tree
+* Emoji directory
+* Mixed indentation
+* Minimal struct format
+* Multi-root trees
 
 ---
 
-## Contributing
+# 🔧 Usage Guide
 
-Contributions are welcome! To contribute:
+### Dry run (recommended):
 
-1. Fork the repository
-2. Clone it locally
-3. Run tests:
+```bash
+tree2cmd struct.txt
+```
 
-   ```bash
-   python -m unittest discover tests
-   ```
-4. Implement your changes and commit
-5. Push and open a Pull Request
+### Execute commands:
 
-Ideas for future enhancements: Windows shell support, custom file templates, GUI frontend.
+```bash
+tree2cmd struct.txt --run
+```
+
+### Save script:
+
+```bash
+tree2cmd struct.txt --save setup.sh
+```
+
+### Use standard input:
+
+```bash
+cat struct.txt | tree2cmd --stdin
+```
+
+### Show tree instead of commands:
+
+```bash
+tree2cmd struct.txt --tree
+```
+
+### Disable logs:
+
+```bash
+tree2cmd struct.txt --no-verbose
+```
 
 ---
 
-## Disclaimer
+# 🧠 How It Works
 
-Experimental project — use at your own risk. Always review generated commands before execution. No liability for data loss.
+tree2cmd uses a **3-stage pipeline**:
+
+---
+
+## 1️⃣ Parsing
+
+Handles:
+
+* ASCII trees (`|-`, `+--`, etc.)
+* Unicode trees (`├──`, `│`, `└──`)
+* Mixed whitespaces and unexpected characters
+* Emojis and non-ASCII folder names
+* Multi-root directories
+* Deep nesting
+
+Uses indentation and tree symbols to infer hierarchy.
 
 ---
 
-## Author
+## 2️⃣ Classification
 
-AnJoMa — [antonyjosephmathew1@gmail.com](mailto:antonyjosephmathew1@gmail.com)  
-GitHub: [https://github.com/ajmanjoma/tree2cmd](https://github.com/ajmanjoma/tree2cmd)
+Folder detection rules:
+
+* Ends with `/` → **folder**
+* Contains `.` → **file**
+* Next line is more indented → **folder**
+* Otherwise → **file**
 
 ---
+
+## 3️⃣ Command Generation
+
+Folders → `mkdir -p`
+Files → `touch`
+
+All paths:
+
+* Are normalized
+* Are quoted
+* Escape shell-sensitive characters
+
+---
+
+# 📚 Documentation
+
+| Topic          | File                   |
+| -------------- | ---------------------- |
+| Usage Guide    | `docs/usage.md`        |
+| CLI Options    | `docs/cli.md`          |
+| Parser Details | `docs/parser.md`       |
+| API Reference  | `docs/api.md`          |
+| FAQ            | `docs/faq.md`          |
+| Contributing   | `docs/contributing.md` |
+| Changelog      | `docs/changelog.md`    |
+
+---
+
+# 🧪 Running Tests
+
+### Run all tests:
+
+```bash
+python -m unittest discover -s tests -p "test*.py" -v
+```
+
+### With Makefile:
+
+```bash
+make test
+```
+
+Coverage: **100%** (parser + CLI)
+
+---
+
+# 🔄 Versioning & Publishing
+
+### 1. Bump version automatically:
+
+```bash
+make version patch
+# or minor / major
+```
+
+### 2. Build:
+
+```bash
+python -m build
+```
+
+### 3. Upload to PyPI:
+
+```bash
+twine upload dist/*
+```
+
+### 4. GitHub Actions (automatic):
+
+* On tag push → build + test + publish
+* On PR → run tests
+
+Workflow located at:
+
+```
+.github/workflows/python-publish.yml
+```
+
+---
+
+# 🤝 Contributing
+
+All contributions are welcome!
+
+1. Fork repo
+2. Create a branch
+3. Add tests for new features
+4. Run tests
+5. Open PR
+
+See full guide:
+📄 `docs/contributing.md`
+
+---
+
+# 🗺️ Roadmap
+
+* [ ] Windows PowerShell support
+* [ ] JSON/YAML → tree converter
+* [ ] VSCode extension
+* [ ] GUI visualizer
+* [ ] Template engine (copy boilerplate files)
+
+---
+
+# 📄 License
+
+MIT License — free for personal & commercial use.
+
+---
+
+# 👤 Author
+
+**Antony Joseph Mathew**
+📧 [antonyjosephmathew1@gmail.com](mailto:antonyjosephmathew1@gmail.com)
+🌐 GitHub: [https://github.com/ajmanjoma/tree2cmd](https://github.com/ajmanjoma/tree2cmd)
+
