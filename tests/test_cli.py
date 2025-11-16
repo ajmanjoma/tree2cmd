@@ -9,12 +9,7 @@ class TestCLI(unittest.TestCase):
     # Basic project tree
     # ---------------------------------------------------------
     def test_basic_tree(self):
-        text = (
-            "Project/\n"
-            "  src/\n"
-            "    main.py\n"
-            "  README.md\n"
-        )
+        text = "Project/\n" "  src/\n" "    main.py\n" "  README.md\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -31,12 +26,7 @@ class TestCLI(unittest.TestCase):
     # Emoji project tree
     # ---------------------------------------------------------
     def test_with_emojis(self):
-        text = (
-            "📦 App/\n"
-            "  backend/\n"
-            "    api.py\n"
-            "  README.md\n"
-        )
+        text = "📦 App/\n" "  backend/\n" "    api.py\n" "  README.md\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -76,11 +66,7 @@ class TestCLI(unittest.TestCase):
     # Mixed spacing (spaces + tabs)
     # ---------------------------------------------------------
     def test_mixed_indentation(self):
-        text = (
-            "Project/\n"
-            "    sub/\n"
-            "\t\tfile.txt\n"
-        )
+        text = "Project/\n" "    sub/\n" "\t\tfile.txt\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -96,10 +82,7 @@ class TestCLI(unittest.TestCase):
     # Root-level multiple items
     # ---------------------------------------------------------
     def test_multiple_root_items(self):
-        text = (
-            "A.txt\n"
-            "B.txt\n"
-        )
+        text = "A.txt\n" "B.txt\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 

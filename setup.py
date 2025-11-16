@@ -17,30 +17,23 @@ setup(
     description="Convert text-based folder tree structures into real directories and files.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-
     author="Antony Joseph Mathew",
     author_email="antonyjosephmathew1@gmail.com",
-
     url="https://github.com/ajmanjoma/tree2cmd",
     project_urls={
         "Documentation": "https://github.com/ajmanjoma/tree2cmd/tree/main/docs",
         "Source": "https://github.com/ajmanjoma/tree2cmd",
         "Issue Tracker": "https://github.com/ajmanjoma/tree2cmd/issues",
     },
-
     packages=["tree2cmd"],
     include_package_data=True,
-
     entry_points={
         "console_scripts": [
             "tree2cmd = tree2cmd.cli:main",
         ]
     },
-
     install_requires=[],  # No dependencies
-
     license="MIT",
-
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
@@ -55,6 +48,5 @@ setup(
         "Topic :: Utilities",
         "Topic :: Software Development :: Code Generators",
     ],
-
     python_requires=">=3.8",
 )

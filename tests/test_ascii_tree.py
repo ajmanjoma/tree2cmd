@@ -9,12 +9,7 @@ class TestAsciiTree(unittest.TestCase):
     # Basic ASCII tree
     # ---------------------------------------------------------
     def test_basic_ascii_tree(self):
-        text = (
-            "Project/\n"
-            "├── src/\n"
-            "│   └── main.py\n"
-            "└── README.md\n"
-        )
+        text = "Project/\n" "├── src/\n" "│   └── main.py\n" "└── README.md\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -31,19 +26,9 @@ class TestAsciiTree(unittest.TestCase):
     # ASCII and struct.txt produce SAME output
     # ---------------------------------------------------------
     def test_ascii_vs_struct_equivalence(self):
-        ascii_tree = (
-            "Project/\n"
-            "├── src/\n"
-            "│   └── main.py\n"
-            "└── README.md\n"
-        )
+        ascii_tree = "Project/\n" "├── src/\n" "│   └── main.py\n" "└── README.md\n"
 
-        struct_tree = (
-            "Project/\n"
-            "  src/\n"
-            "    main.py\n"
-            "  README.md\n"
-        )
+        struct_tree = "Project/\n" "  src/\n" "    main.py\n" "  README.md\n"
 
         cmds_ascii = convert_tree_to_commands(ascii_tree, dry_run=True)
         cmds_struct = convert_tree_to_commands(struct_tree, dry_run=True)
@@ -54,12 +39,7 @@ class TestAsciiTree(unittest.TestCase):
     # Emoji ASCII tree support
     # ---------------------------------------------------------
     def test_emoji_ascii_tree(self):
-        text = (
-            "📦 App/\n"
-            "├── backend/\n"
-            "│   └── api.py\n"
-            "└── README.md\n"
-        )
+        text = "📦 App/\n" "├── backend/\n" "│   └── api.py\n" "└── README.md\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -76,11 +56,7 @@ class TestAsciiTree(unittest.TestCase):
     # ASCII tree with multiple root items
     # ---------------------------------------------------------
     def test_ascii_multiple_root(self):
-        text = (
-            "Root/\n"
-            "├── file1.txt\n"
-            "└── file2.txt\n"
-        )
+        text = "Root/\n" "├── file1.txt\n" "└── file2.txt\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -121,12 +97,7 @@ class TestAsciiTree(unittest.TestCase):
         self.assertEqual(cmds, expected)
 
     def test_incomplete_ascii_tree(self):
-        text = (
-            "App/\n"
-            "├── api/\n"
-            "    └── handler.py\n"
-            "└── README.md\n"
-        )
+        text = "App/\n" "├── api/\n" "    └── handler.py\n" "└── README.md\n"
 
         cmds = convert_tree_to_commands(text, dry_run=True)
 
@@ -138,6 +109,7 @@ class TestAsciiTree(unittest.TestCase):
         ]
 
         self.assertEqual(cmds, expected)
+
 
 if __name__ == "__main__":
     unittest.main()
