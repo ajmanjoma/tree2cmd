@@ -3,34 +3,36 @@ name: Publish to PyPI
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*.*.*"   # runs when you push a tag like v0.2.1
 
 permissions:
   contents: read
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # good practice for tagged builds
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+          cache: pip
 
       - name: Install build tools
         run: |
-          pip install --upgrade pip setuptools wheel build twine
+          python -m pip install --upgrade pip
+          pip install build twine
 
       - name: Build package
         run: python -m build
 
-      - name: Check metadata
+      - name: Check distribution files
         run: twine check dist/*
 
       - name: Publish to PyPI
