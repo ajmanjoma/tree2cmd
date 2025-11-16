@@ -51,4 +51,5 @@ jobs:
           git push --tags
 
       - name: Workflow Summary
-        run:  Version bump completed: ${{ steps.bump.outputs.type }}
+        run: |
+          printf "Version bump completed: %s\n" "${{ steps.bump.outputs.type }}"
