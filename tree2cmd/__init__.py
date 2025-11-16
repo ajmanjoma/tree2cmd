@@ -26,7 +26,7 @@ try:
     __version__ = version("tree2cmd")
 except PackageNotFoundError:
     # Local development fallback
-    __version__ = "0.2.1"
+    __version__ = "0.2.3"
 
 __all__ = [
     "parse_tree",

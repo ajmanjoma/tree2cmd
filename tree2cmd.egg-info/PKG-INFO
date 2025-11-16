@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: tree2cmd
-Version: 0.2.2
+Version: 0.2.3
 Summary: Convert text directory trees (struct.txt) into real folders and files.
 Home-page: https://github.com/ajmanjoma/tree2cmd
 Author: Antony Joseph Mathew
