@@ -1,3 +1,116 @@
+# ============================================================
+# Build System (PEP 517/518)
+# ============================================================
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=69", "wheel", "build"]
 build-backend = "setuptools.build_meta"
+
+
+# ============================================================
+# Project Metadata (PEP 621)
+# ============================================================
+[project]
+name = "tree2cmd"
+version = "0.1.3"                  # Sync with your release tag
+description = "Convert text directory trees (struct.txt) into real folders and files."
+readme = "README.md"
+requires-python = ">=3.8"
+
+authors = [
+    { name = "Antony Joseph Mathew", email = "antonyjosephmathew1@gmail.com" }
+]
+
+license = { file = "LICENSE" }
+
+keywords = [
+    "tree",
+    "folder generator",
+    "project scaffolding",
+    "cli",
+    "filesystem",
+    "structure parser",
+    "automation"
+]
+
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Code Generators",
+]
+
+dependencies = []
+
+
+# ============================================================
+# Console Script
+# ============================================================
+[project.scripts]
+tree2cmd = "tree2cmd.cli:main"
+
+
+# ============================================================
+# Project URLs (shows on PyPI)
+# ============================================================
+[project.urls]
+Homepage = "https://github.com/ajmanjoma/tree2cmd"
+Repository = "https://github.com/ajmanjoma/tree2cmd"
+Issues = "https://github.com/ajmanjoma/tree2cmd/issues"
+Documentation = "https://github.com/ajmanjoma/tree2cmd/tree/main/docs"
+
+
+# ============================================================
+# Optional Dependencies
+# ============================================================
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "mypy",
+    "build",
+    "twine",
+]
+
+
+# ============================================================
+# Black Configuration
+# ============================================================
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+
+
+# ============================================================
+# Flake8 Configuration
+# ============================================================
+[tool.flake8]
+max-line-length = 120
+exclude = ["dist", "build", ".venv", ".git"]
+
+
+# ============================================================
+# Mypy Configuration
+# ============================================================
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+strict_optional = true
+
+
+# ============================================================
+# Editable Install Support (optional)
+# ============================================================
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["tree2cmd*"]
