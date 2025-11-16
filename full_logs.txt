@@ -1,0 +1,765 @@
+publish	Set up job	﻿2025-11-16T16:57:40.2062759Z Current runner version: '2.329.0'
+publish	Set up job	2025-11-16T16:57:40.2089288Z ##[group]Runner Image Provisioner
+publish	Set up job	2025-11-16T16:57:40.2090188Z Hosted Compute Agent
+publish	Set up job	2025-11-16T16:57:40.2090861Z Version: 20251016.436
+publish	Set up job	2025-11-16T16:57:40.2091464Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+publish	Set up job	2025-11-16T16:57:40.2092191Z Build Date: 2025-10-15T20:44:12Z
+publish	Set up job	2025-11-16T16:57:40.2092974Z ##[endgroup]
+publish	Set up job	2025-11-16T16:57:40.2093597Z ##[group]Operating System
+publish	Set up job	2025-11-16T16:57:40.2094158Z Ubuntu
+publish	Set up job	2025-11-16T16:57:40.2094707Z 24.04.3
+publish	Set up job	2025-11-16T16:57:40.2095187Z LTS
+publish	Set up job	2025-11-16T16:57:40.2095690Z ##[endgroup]
+publish	Set up job	2025-11-16T16:57:40.2096162Z ##[group]Runner Image
+publish	Set up job	2025-11-16T16:57:40.2096833Z Image: ubuntu-24.04
+publish	Set up job	2025-11-16T16:57:40.2097378Z Version: 20251112.124.1
+publish	Set up job	2025-11-16T16:57:40.2098369Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+publish	Set up job	2025-11-16T16:57:40.2099861Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+publish	Set up job	2025-11-16T16:57:40.2101140Z ##[endgroup]
+publish	Set up job	2025-11-16T16:57:40.2102246Z ##[group]GITHUB_TOKEN Permissions
+publish	Set up job	2025-11-16T16:57:40.2104226Z Contents: read
+publish	Set up job	2025-11-16T16:57:40.2104888Z Metadata: read
+publish	Set up job	2025-11-16T16:57:40.2105415Z ##[endgroup]
+publish	Set up job	2025-11-16T16:57:40.2108041Z Secret source: Actions
+publish	Set up job	2025-11-16T16:57:40.2109102Z Prepare workflow directory
+publish	Set up job	2025-11-16T16:57:40.2432646Z Prepare all required actions
+publish	Set up job	2025-11-16T16:57:40.2470166Z Getting action download info
+publish	Set up job	2025-11-16T16:57:40.7439058Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+publish	Set up job	2025-11-16T16:57:40.8477600Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+publish	Set up job	2025-11-16T16:57:40.9272079Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+publish	Set up job	2025-11-16T16:57:41.0366840Z Download action repository 'pypa/gh-action-pypi-publish@release/v1' (SHA:ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e)
+publish	Set up job	2025-11-16T16:57:41.6280828Z Getting action download info
+publish	Set up job	2025-11-16T16:57:41.8182987Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+publish	Set up job	2025-11-16T16:57:41.9422160Z Complete job name: publish
+publish	Checkout repository	﻿2025-11-16T16:57:42.0240635Z ##[group]Run actions/checkout@v4
+publish	Checkout repository	2025-11-16T16:57:42.0241995Z with:
+publish	Checkout repository	2025-11-16T16:57:42.0242989Z   fetch-depth: 0
+publish	Checkout repository	2025-11-16T16:57:42.0243843Z   repository: ajmanjoma/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:42.0245125Z   token: ***
+publish	Checkout repository	2025-11-16T16:57:42.0245893Z   ssh-strict: true
+publish	Checkout repository	2025-11-16T16:57:42.0246717Z   ssh-user: git
+publish	Checkout repository	2025-11-16T16:57:42.0247536Z   persist-credentials: true
+publish	Checkout repository	2025-11-16T16:57:42.0248462Z   clean: true
+publish	Checkout repository	2025-11-16T16:57:42.0249284Z   sparse-checkout-cone-mode: true
+publish	Checkout repository	2025-11-16T16:57:42.0250292Z   fetch-tags: false
+publish	Checkout repository	2025-11-16T16:57:42.0251124Z   show-progress: true
+publish	Checkout repository	2025-11-16T16:57:42.0251949Z   lfs: false
+publish	Checkout repository	2025-11-16T16:57:42.0252899Z   submodules: false
+publish	Checkout repository	2025-11-16T16:57:42.0253737Z   set-safe-directory: true
+publish	Checkout repository	2025-11-16T16:57:42.0254918Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:42.1332783Z Syncing repository: ajmanjoma/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:42.1335377Z ##[group]Getting Git version info
+publish	Checkout repository	2025-11-16T16:57:42.1336699Z Working directory is '/home/runner/work/tree2cmd/tree2cmd'
+publish	Checkout repository	2025-11-16T16:57:42.1338589Z [command]/usr/bin/git version
+publish	Checkout repository	2025-11-16T16:57:42.1404572Z git version 2.51.2
+publish	Checkout repository	2025-11-16T16:57:42.1431691Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:42.1453600Z Temporarily overriding HOME='/home/runner/work/_temp/d1e8fba9-db75-494c-9dfb-19fab4301ebf' before making global git config changes
+publish	Checkout repository	2025-11-16T16:57:42.1456491Z Adding repository directory to the temporary git global config as a safe directory
+publish	Checkout repository	2025-11-16T16:57:42.1459981Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tree2cmd/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:42.1497494Z Deleting the contents of '/home/runner/work/tree2cmd/tree2cmd'
+publish	Checkout repository	2025-11-16T16:57:42.1501132Z ##[group]Initializing the repository
+publish	Checkout repository	2025-11-16T16:57:42.1505191Z [command]/usr/bin/git init /home/runner/work/tree2cmd/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:42.1606315Z hint: Using 'master' as the name for the initial branch. This default branch name
+publish	Checkout repository	2025-11-16T16:57:42.1609641Z hint: is subject to change. To configure the initial branch name to use in all
+publish	Checkout repository	2025-11-16T16:57:42.1612376Z hint: of your new repositories, which will suppress this warning, call:
+publish	Checkout repository	2025-11-16T16:57:42.1614057Z hint:
+publish	Checkout repository	2025-11-16T16:57:42.1614977Z hint: 	git config --global init.defaultBranch <name>
+publish	Checkout repository	2025-11-16T16:57:42.1616284Z hint:
+publish	Checkout repository	2025-11-16T16:57:42.1617727Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+publish	Checkout repository	2025-11-16T16:57:42.1619544Z hint: 'development'. The just-created branch can be renamed via this command:
+publish	Checkout repository	2025-11-16T16:57:42.1620963Z hint:
+publish	Checkout repository	2025-11-16T16:57:42.1621947Z hint: 	git branch -m <name>
+publish	Checkout repository	2025-11-16T16:57:42.1623827Z hint:
+publish	Checkout repository	2025-11-16T16:57:42.1625341Z hint: Disable this message with "git config set advice.defaultBranchName false"
+publish	Checkout repository	2025-11-16T16:57:42.1627313Z Initialized empty Git repository in /home/runner/work/tree2cmd/tree2cmd/.git/
+publish	Checkout repository	2025-11-16T16:57:42.1630437Z [command]/usr/bin/git remote add origin https://github.com/ajmanjoma/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:42.1659984Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:42.1661521Z ##[group]Disabling automatic garbage collection
+publish	Checkout repository	2025-11-16T16:57:42.1663771Z [command]/usr/bin/git config --local gc.auto 0
+publish	Checkout repository	2025-11-16T16:57:42.1692069Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:42.1693535Z ##[group]Setting up auth
+publish	Checkout repository	2025-11-16T16:57:42.1698457Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	Checkout repository	2025-11-16T16:57:42.1729841Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	Checkout repository	2025-11-16T16:57:42.2062863Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	Checkout repository	2025-11-16T16:57:42.2092954Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	Checkout repository	2025-11-16T16:57:42.2314529Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+publish	Checkout repository	2025-11-16T16:57:42.2357925Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:42.2360848Z ##[group]Fetching the repository
+publish	Checkout repository	2025-11-16T16:57:42.2369467Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+publish	Checkout repository	2025-11-16T16:57:43.4525255Z From https://github.com/ajmanjoma/tree2cmd
+publish	Checkout repository	2025-11-16T16:57:43.4526534Z  * [new branch]      main       -> origin/main
+publish	Checkout repository	2025-11-16T16:57:43.4526892Z  * [new tag]         v0.1.4     -> v0.1.4
+publish	Checkout repository	2025-11-16T16:57:43.4527281Z  * [new tag]         v0.1.5     -> v0.1.5
+publish	Checkout repository	2025-11-16T16:57:43.4527578Z  * [new tag]         v0.2.1     -> v0.2.1
+publish	Checkout repository	2025-11-16T16:57:43.4527881Z  * [new tag]         v0.2.2     -> v0.2.2
+publish	Checkout repository	2025-11-16T16:57:43.4528165Z  * [new tag]         v0.2.3     -> v0.2.3
+publish	Checkout repository	2025-11-16T16:57:43.4580935Z [command]/usr/bin/git branch --list --remote origin/main
+publish	Checkout repository	2025-11-16T16:57:43.4604943Z   origin/main
+publish	Checkout repository	2025-11-16T16:57:43.4614036Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+publish	Checkout repository	2025-11-16T16:57:43.4634498Z 75b2f68d3d186b3094d47545c4961fc2f89b7f96
+publish	Checkout repository	2025-11-16T16:57:43.4639859Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:43.4640318Z ##[group]Determining the checkout info
+publish	Checkout repository	2025-11-16T16:57:43.4641251Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:43.4646002Z [command]/usr/bin/git sparse-checkout disable
+publish	Checkout repository	2025-11-16T16:57:43.4688317Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+publish	Checkout repository	2025-11-16T16:57:43.4715106Z ##[group]Checking out the ref
+publish	Checkout repository	2025-11-16T16:57:43.4719646Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+publish	Checkout repository	2025-11-16T16:57:43.8747498Z Switched to a new branch 'main'
+publish	Checkout repository	2025-11-16T16:57:43.8750030Z branch 'main' set up to track 'origin/main'.
+publish	Checkout repository	2025-11-16T16:57:43.8771253Z ##[endgroup]
+publish	Checkout repository	2025-11-16T16:57:43.8812090Z [command]/usr/bin/git log -1 --format=%H
+publish	Checkout repository	2025-11-16T16:57:43.8834689Z 75b2f68d3d186b3094d47545c4961fc2f89b7f96
+publish	Set up Python	﻿2025-11-16T16:57:43.9054982Z ##[group]Run actions/setup-python@v5
+publish	Set up Python	2025-11-16T16:57:43.9055297Z with:
+publish	Set up Python	2025-11-16T16:57:43.9055490Z   python-version: 3.11
+publish	Set up Python	2025-11-16T16:57:43.9055701Z   cache: pip
+publish	Set up Python	2025-11-16T16:57:43.9055876Z   check-latest: false
+publish	Set up Python	2025-11-16T16:57:43.9056206Z   token: ***
+publish	Set up Python	2025-11-16T16:57:43.9056392Z   update-environment: true
+publish	Set up Python	2025-11-16T16:57:43.9056615Z   allow-prereleases: false
+publish	Set up Python	2025-11-16T16:57:43.9056875Z   freethreaded: false
+publish	Set up Python	2025-11-16T16:57:43.9057060Z ##[endgroup]
+publish	Set up Python	2025-11-16T16:57:44.0731650Z ##[group]Installed versions
+publish	Set up Python	2025-11-16T16:57:44.0842890Z Successfully set up CPython (3.11.14)
+publish	Set up Python	2025-11-16T16:57:44.0844126Z ##[endgroup]
+publish	Set up Python	2025-11-16T16:57:44.4291739Z [command]/opt/hostedtoolcache/Python/3.11.14/x64/bin/pip cache dir
+publish	Set up Python	2025-11-16T16:57:44.7547441Z /home/runner/.cache/pip
+publish	Set up Python	2025-11-16T16:57:45.0851830Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.14-pip-aaa1795cdc5304d617e7a1664aa764952380be5f7141950a21456234506965fe
+publish	Set up Python	2025-11-16T16:57:46.3848959Z Received 5817741 of 26789261 (21.7%), 5.5 MBs/sec
+publish	Set up Python	2025-11-16T16:57:46.7414155Z Received 26789261 of 26789261 (100.0%), 18.8 MBs/sec
+publish	Set up Python	2025-11-16T16:57:46.7414964Z Cache Size: ~26 MB (26789261 B)
+publish	Set up Python	2025-11-16T16:57:46.7444444Z [command]/usr/bin/tar -xf /home/runner/work/_temp/87ce6ef5-a995-4192-92d8-5976897cce77/cache.tzst -P -C /home/runner/work/tree2cmd/tree2cmd --use-compress-program unzstd
+publish	Set up Python	2025-11-16T16:57:46.8179445Z Cache restored successfully
+publish	Set up Python	2025-11-16T16:57:46.8234367Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.14-pip-aaa1795cdc5304d617e7a1664aa764952380be5f7141950a21456234506965fe
+publish	Install build tools	﻿2025-11-16T16:57:46.8395058Z ##[group]Run python -m pip install --upgrade pip
+publish	Install build tools	2025-11-16T16:57:46.8395496Z [36;1mpython -m pip install --upgrade pip[0m
+publish	Install build tools	2025-11-16T16:57:46.8395795Z [36;1mpip install build twine[0m
+publish	Install build tools	2025-11-16T16:57:46.8434896Z shell: /usr/bin/bash -e {0}
+publish	Install build tools	2025-11-16T16:57:46.8435149Z env:
+publish	Install build tools	2025-11-16T16:57:46.8435410Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Install build tools	2025-11-16T16:57:46.8435870Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Install build tools	2025-11-16T16:57:46.8436279Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Install build tools	2025-11-16T16:57:46.8436634Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Install build tools	2025-11-16T16:57:46.8436995Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Install build tools	2025-11-16T16:57:46.8437362Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Install build tools	2025-11-16T16:57:46.8437651Z ##[endgroup]
+publish	Install build tools	2025-11-16T16:57:47.4183704Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (25.3)
+publish	Install build tools	2025-11-16T16:57:47.9664736Z Collecting build
+publish	Install build tools	2025-11-16T16:57:47.9680164Z   Using cached build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
+publish	Install build tools	2025-11-16T16:57:47.9871633Z Collecting twine
+publish	Install build tools	2025-11-16T16:57:47.9886397Z   Using cached twine-6.2.0-py3-none-any.whl.metadata (3.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.0047248Z Collecting packaging>=19.1 (from build)
+publish	Install build tools	2025-11-16T16:57:48.0064209Z   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+publish	Install build tools	2025-11-16T16:57:48.0152631Z Collecting pyproject_hooks (from build)
+publish	Install build tools	2025-11-16T16:57:48.0167642Z   Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+publish	Install build tools	2025-11-16T16:57:48.0389825Z Collecting readme-renderer>=35.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.0403367Z   Using cached readme_renderer-44.0-py3-none-any.whl.metadata (2.8 kB)
+publish	Install build tools	2025-11-16T16:57:48.0635275Z Collecting requests>=2.20 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.0651970Z   Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+publish	Install build tools	2025-11-16T16:57:48.0760027Z Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.0780519Z   Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+publish	Install build tools	2025-11-16T16:57:48.1001217Z Collecting urllib3>=1.26.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.1014631Z   Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+publish	Install build tools	2025-11-16T16:57:48.1556651Z Collecting keyring>=21.2.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.2111204Z   Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+publish	Install build tools	2025-11-16T16:57:48.2329402Z Collecting rfc3986>=1.4.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.2342918Z   Using cached rfc3986-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.2693427Z Collecting rich>=12.0.0 (from twine)
+publish	Install build tools	2025-11-16T16:57:48.2706867Z   Using cached rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+publish	Install build tools	2025-11-16T16:57:48.2829913Z Collecting id (from twine)
+publish	Install build tools	2025-11-16T16:57:48.2843301Z   Using cached id-1.5.0-py3-none-any.whl.metadata (5.2 kB)
+publish	Install build tools	2025-11-16T16:57:48.2957077Z Collecting SecretStorage>=3.2 (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.2970847Z   Using cached secretstorage-3.4.1-py3-none-any.whl.metadata (4.0 kB)
+publish	Install build tools	2025-11-16T16:57:48.3057069Z Collecting jeepney>=0.4.2 (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3069989Z   Using cached jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+publish	Install build tools	2025-11-16T16:57:48.3333321Z Collecting importlib_metadata>=4.11.4 (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3346211Z   Using cached importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+publish	Install build tools	2025-11-16T16:57:48.3452327Z Collecting jaraco.classes (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3465492Z   Using cached jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.3609537Z Collecting jaraco.functools (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3622740Z   Using cached jaraco_functools-4.3.0-py3-none-any.whl.metadata (2.9 kB)
+publish	Install build tools	2025-11-16T16:57:48.3723056Z Collecting jaraco.context (from keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3735873Z   Using cached jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+publish	Install build tools	2025-11-16T16:57:48.3898412Z Collecting zipp>=3.20 (from importlib_metadata>=4.11.4->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.3911619Z   Using cached zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.4273072Z Collecting nh3>=0.2.14 (from readme-renderer>=35.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.4286677Z   Using cached nh3-0.3.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+publish	Install build tools	2025-11-16T16:57:48.4405348Z Collecting docutils>=0.21.2 (from readme-renderer>=35.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.4418036Z   Using cached docutils-0.22.3-py3-none-any.whl.metadata (15 kB)
+publish	Install build tools	2025-11-16T16:57:48.4595999Z Collecting Pygments>=2.5.1 (from readme-renderer>=35.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.4608900Z   Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+publish	Install build tools	2025-11-16T16:57:48.5443702Z Collecting charset_normalizer<4,>=2 (from requests>=2.20->twine)
+publish	Install build tools	2025-11-16T16:57:48.5458899Z   Using cached charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+publish	Install build tools	2025-11-16T16:57:48.5593922Z Collecting idna<4,>=2.5 (from requests>=2.20->twine)
+publish	Install build tools	2025-11-16T16:57:48.5606685Z   Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+publish	Install build tools	2025-11-16T16:57:48.5933342Z Collecting certifi>=2017.4.17 (from requests>=2.20->twine)
+publish	Install build tools	2025-11-16T16:57:48.5946857Z   Using cached certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+publish	Install build tools	2025-11-16T16:57:48.6241271Z Collecting markdown-it-py>=2.2.0 (from rich>=12.0.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.6254452Z   Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+publish	Install build tools	2025-11-16T16:57:48.6418779Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.0.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.6431370Z   Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.8190601Z Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.8205801Z   Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+publish	Install build tools	2025-11-16T16:57:48.9437329Z Collecting cffi>=2.0.0 (from cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.9452114Z   Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+publish	Install build tools	2025-11-16T16:57:48.9553111Z Collecting pycparser (from cffi>=2.0.0->cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.9565691Z   Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+publish	Install build tools	2025-11-16T16:57:48.9729012Z Collecting more-itertools (from jaraco.classes->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.9741705Z   Using cached more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+publish	Install build tools	2025-11-16T16:57:48.9839052Z Collecting backports.tarfile (from jaraco.context->keyring>=21.2.0->twine)
+publish	Install build tools	2025-11-16T16:57:48.9851926Z   Using cached backports.tarfile-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+publish	Install build tools	2025-11-16T16:57:48.9933655Z Using cached build-1.3.0-py3-none-any.whl (23 kB)
+publish	Install build tools	2025-11-16T16:57:48.9946703Z Using cached twine-6.2.0-py3-none-any.whl (42 kB)
+publish	Install build tools	2025-11-16T16:57:48.9981109Z Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+publish	Install build tools	2025-11-16T16:57:49.0068992Z Using cached importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+publish	Install build tools	2025-11-16T16:57:49.0081657Z Using cached jeepney-0.9.0-py3-none-any.whl (49 kB)
+publish	Install build tools	2025-11-16T16:57:49.0094856Z Using cached packaging-25.0-py3-none-any.whl (66 kB)
+publish	Install build tools	2025-11-16T16:57:49.0107796Z Using cached readme_renderer-44.0-py3-none-any.whl (13 kB)
+publish	Install build tools	2025-11-16T16:57:49.0120190Z Using cached docutils-0.22.3-py3-none-any.whl (633 kB)
+publish	Install build tools	2025-11-16T16:57:49.0137848Z Using cached nh3-0.3.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (797 kB)
+publish	Install build tools	2025-11-16T16:57:49.0156391Z Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+publish	Install build tools	2025-11-16T16:57:49.0178097Z Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+publish	Install build tools	2025-11-16T16:57:49.0191635Z Using cached charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+publish	Install build tools	2025-11-16T16:57:49.0205059Z Using cached idna-3.11-py3-none-any.whl (71 kB)
+publish	Install build tools	2025-11-16T16:57:49.0217978Z Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+publish	Install build tools	2025-11-16T16:57:49.0231623Z Using cached certifi-2025.11.12-py3-none-any.whl (159 kB)
+publish	Install build tools	2025-11-16T16:57:49.0245558Z Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+publish	Install build tools	2025-11-16T16:57:49.0258357Z Using cached rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+publish	Install build tools	2025-11-16T16:57:49.0270958Z Using cached rich-14.2.0-py3-none-any.whl (243 kB)
+publish	Install build tools	2025-11-16T16:57:49.0285383Z Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+publish	Install build tools	2025-11-16T16:57:49.0298433Z Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+publish	Install build tools	2025-11-16T16:57:49.0311310Z Using cached secretstorage-3.4.1-py3-none-any.whl (15 kB)
+publish	Install build tools	2025-11-16T16:57:49.0324703Z Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+publish	Install build tools	2025-11-16T16:57:49.0369975Z Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+publish	Install build tools	2025-11-16T16:57:49.0384163Z Using cached zipp-3.23.0-py3-none-any.whl (10 kB)
+publish	Install build tools	2025-11-16T16:57:49.0397028Z Using cached id-1.5.0-py3-none-any.whl (13 kB)
+publish	Install build tools	2025-11-16T16:57:49.0410089Z Using cached jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+publish	Install build tools	2025-11-16T16:57:49.0422960Z Using cached jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+publish	Install build tools	2025-11-16T16:57:49.0436039Z Using cached backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+publish	Install build tools	2025-11-16T16:57:49.0448974Z Using cached jaraco_functools-4.3.0-py3-none-any.whl (10 kB)
+publish	Install build tools	2025-11-16T16:57:49.0461953Z Using cached more_itertools-10.8.0-py3-none-any.whl (69 kB)
+publish	Install build tools	2025-11-16T16:57:49.0475637Z Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+publish	Install build tools	2025-11-16T16:57:49.0489142Z Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+publish	Install build tools	2025-11-16T16:57:49.1254896Z Installing collected packages: zipp, urllib3, rfc3986, pyproject_hooks, Pygments, pycparser, packaging, nh3, more-itertools, mdurl, jeepney, idna, docutils, charset_normalizer, certifi, backports.tarfile, requests, readme-renderer, markdown-it-py, jaraco.functools, jaraco.context, jaraco.classes, importlib_metadata, cffi, build, rich, requests-toolbelt, id, cryptography, SecretStorage, keyring, twine
+publish	Install build tools	2025-11-16T16:57:51.1089726Z 
+publish	Install build tools	2025-11-16T16:57:51.1113665Z Successfully installed Pygments-2.19.2 SecretStorage-3.4.1 backports.tarfile-1.2.0 build-1.3.0 certifi-2025.11.12 cffi-2.0.0 charset_normalizer-3.4.4 cryptography-46.0.3 docutils-0.22.3 id-1.5.0 idna-3.11 importlib_metadata-8.7.0 jaraco.classes-3.4.0 jaraco.context-6.0.1 jaraco.functools-4.3.0 jeepney-0.9.0 keyring-25.7.0 markdown-it-py-4.0.0 mdurl-0.1.2 more-itertools-10.8.0 nh3-0.3.2 packaging-25.0 pycparser-2.23 pyproject_hooks-1.2.0 readme-renderer-44.0 requests-2.32.5 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-14.2.0 twine-6.2.0 urllib3-2.5.0 zipp-3.23.0
+publish	Build package	﻿2025-11-16T16:57:51.2196147Z ##[group]Run python -m build
+publish	Build package	2025-11-16T16:57:51.2196448Z [36;1mpython -m build[0m
+publish	Build package	2025-11-16T16:57:51.2229355Z shell: /usr/bin/bash -e {0}
+publish	Build package	2025-11-16T16:57:51.2229578Z env:
+publish	Build package	2025-11-16T16:57:51.2229821Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Build package	2025-11-16T16:57:51.2230242Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Build package	2025-11-16T16:57:51.2230641Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Build package	2025-11-16T16:57:51.2231007Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Build package	2025-11-16T16:57:51.2231366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Build package	2025-11-16T16:57:51.2231716Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Build package	2025-11-16T16:57:51.2232013Z ##[endgroup]
+publish	Build package	2025-11-16T16:57:51.3055126Z * Creating isolated environment: venv+pip...
+publish	Build package	2025-11-16T16:57:51.3462345Z * Installing packages in isolated environment:
+publish	Build package	2025-11-16T16:57:52.2521985Z   - build
+publish	Build package	2025-11-16T16:57:52.2522397Z   - setuptools>=69
+publish	Build package	2025-11-16T16:57:52.2522994Z   - wheel
+publish	Build package	2025-11-16T16:57:52.2523330Z * Getting build dependencies for sdist...
+publish	Build package	2025-11-16T16:57:52.5765375Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+publish	Build package	2025-11-16T16:57:52.5766876Z !!
+publish	Build package	2025-11-16T16:57:52.5767079Z 
+publish	Build package	2025-11-16T16:57:52.5767273Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.5768317Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+publish	Build package	2025-11-16T16:57:52.5769417Z 
+publish	Build package	2025-11-16T16:57:52.5769747Z         By 2026-Feb-18, you need to update your project and remove deprecated calls
+publish	Build package	2025-11-16T16:57:52.5770424Z         or your builds will no longer be supported.
+publish	Build package	2025-11-16T16:57:52.5770788Z 
+publish	Build package	2025-11-16T16:57:52.5771325Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.5772021Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.5772254Z 
+publish	Build package	2025-11-16T16:57:52.5772329Z !!
+publish	Build package	2025-11-16T16:57:52.5772854Z   corresp(dist, value, root_dir)
+publish	Build package	2025-11-16T16:57:52.6605922Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:52.6606891Z !!
+publish	Build package	2025-11-16T16:57:52.6607008Z 
+publish	Build package	2025-11-16T16:57:52.6607137Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.6607688Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:52.6608145Z 
+publish	Build package	2025-11-16T16:57:52.6608316Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:52.6608592Z 
+publish	Build package	2025-11-16T16:57:52.6608989Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.6609636Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.6609980Z 
+publish	Build package	2025-11-16T16:57:52.6610117Z !!
+publish	Build package	2025-11-16T16:57:52.6610407Z   dist._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:52.6611277Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:52.6611997Z !!
+publish	Build package	2025-11-16T16:57:52.6612096Z 
+publish	Build package	2025-11-16T16:57:52.6612207Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.6612997Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:52.6613649Z 
+publish	Build package	2025-11-16T16:57:52.6613775Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:52.6613988Z 
+publish	Build package	2025-11-16T16:57:52.6614325Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.6615060Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.6615285Z 
+publish	Build package	2025-11-16T16:57:52.6615360Z !!
+publish	Build package	2025-11-16T16:57:52.6615566Z   self._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:52.6625954Z running egg_info
+publish	Build package	2025-11-16T16:57:52.6640459Z writing tree2cmd.egg-info/PKG-INFO
+publish	Build package	2025-11-16T16:57:52.6651218Z writing dependency_links to tree2cmd.egg-info/dependency_links.txt
+publish	Build package	2025-11-16T16:57:52.6653233Z writing entry points to tree2cmd.egg-info/entry_points.txt
+publish	Build package	2025-11-16T16:57:52.6658677Z writing requirements to tree2cmd.egg-info/requires.txt
+publish	Build package	2025-11-16T16:57:52.6660101Z writing top-level names to tree2cmd.egg-info/top_level.txt
+publish	Build package	2025-11-16T16:57:52.6701287Z reading manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:52.6705882Z adding license file 'LICENSE'
+publish	Build package	2025-11-16T16:57:52.6714001Z writing manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:52.6992104Z * Building sdist...
+publish	Build package	2025-11-16T16:57:52.8177593Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+publish	Build package	2025-11-16T16:57:52.8179084Z !!
+publish	Build package	2025-11-16T16:57:52.8179273Z 
+publish	Build package	2025-11-16T16:57:52.8179449Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8180682Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+publish	Build package	2025-11-16T16:57:52.8181699Z 
+publish	Build package	2025-11-16T16:57:52.8182038Z         By 2026-Feb-18, you need to update your project and remove deprecated calls
+publish	Build package	2025-11-16T16:57:52.8182987Z         or your builds will no longer be supported.
+publish	Build package	2025-11-16T16:57:52.8183421Z 
+publish	Build package	2025-11-16T16:57:52.8183948Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.8184794Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8185172Z 
+publish	Build package	2025-11-16T16:57:52.8185302Z !!
+publish	Build package	2025-11-16T16:57:52.8185613Z   corresp(dist, value, root_dir)
+publish	Build package	2025-11-16T16:57:52.8350451Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:52.8351840Z !!
+publish	Build package	2025-11-16T16:57:52.8352012Z 
+publish	Build package	2025-11-16T16:57:52.8352200Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8353215Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:52.8353853Z 
+publish	Build package	2025-11-16T16:57:52.8354072Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:52.8354416Z 
+publish	Build package	2025-11-16T16:57:52.8354931Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.8355783Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8356147Z 
+publish	Build package	2025-11-16T16:57:52.8356268Z !!
+publish	Build package	2025-11-16T16:57:52.8356571Z   dist._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:52.8361756Z /tmp/build-env-7cgv5vw7/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:52.8363061Z !!
+publish	Build package	2025-11-16T16:57:52.8363237Z 
+publish	Build package	2025-11-16T16:57:52.8363420Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8364209Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:52.8364842Z 
+publish	Build package	2025-11-16T16:57:52.8365374Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:52.8365712Z 
+publish	Build package	2025-11-16T16:57:52.8366241Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:52.8367066Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:52.8367670Z 
+publish	Build package	2025-11-16T16:57:52.8367785Z !!
+publish	Build package	2025-11-16T16:57:52.8368103Z   self._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:52.8377713Z running sdist
+publish	Build package	2025-11-16T16:57:52.8379693Z running egg_info
+publish	Build package	2025-11-16T16:57:52.8404217Z writing tree2cmd.egg-info/PKG-INFO
+publish	Build package	2025-11-16T16:57:52.8414585Z writing dependency_links to tree2cmd.egg-info/dependency_links.txt
+publish	Build package	2025-11-16T16:57:52.8417345Z writing entry points to tree2cmd.egg-info/entry_points.txt
+publish	Build package	2025-11-16T16:57:52.8422028Z writing requirements to tree2cmd.egg-info/requires.txt
+publish	Build package	2025-11-16T16:57:52.8423580Z writing top-level names to tree2cmd.egg-info/top_level.txt
+publish	Build package	2025-11-16T16:57:52.8462298Z reading manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:52.8466625Z adding license file 'LICENSE'
+publish	Build package	2025-11-16T16:57:52.8474439Z writing manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:52.8476199Z running check
+publish	Build package	2025-11-16T16:57:52.8501693Z creating tree2cmd-0.2.3
+publish	Build package	2025-11-16T16:57:52.8504902Z creating tree2cmd-0.2.3/tests
+publish	Build package	2025-11-16T16:57:52.8506300Z creating tree2cmd-0.2.3/tree2cmd
+publish	Build package	2025-11-16T16:57:52.8508174Z creating tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8509154Z copying files to tree2cmd-0.2.3...
+publish	Build package	2025-11-16T16:57:52.8510109Z copying LICENSE -> tree2cmd-0.2.3
+publish	Build package	2025-11-16T16:57:52.8512256Z copying README.md -> tree2cmd-0.2.3
+publish	Build package	2025-11-16T16:57:52.8514422Z copying pyproject.toml -> tree2cmd-0.2.3
+publish	Build package	2025-11-16T16:57:52.8516114Z copying setup.py -> tree2cmd-0.2.3
+publish	Build package	2025-11-16T16:57:52.8518081Z copying tests/test_ascii_tree.py -> tree2cmd-0.2.3/tests
+publish	Build package	2025-11-16T16:57:52.8519873Z copying tests/test_cli.py -> tree2cmd-0.2.3/tests
+publish	Build package	2025-11-16T16:57:52.8521676Z copying tests/test_integration.py -> tree2cmd-0.2.3/tests
+publish	Build package	2025-11-16T16:57:52.8523565Z copying tests/test_parser.py -> tree2cmd-0.2.3/tests
+publish	Build package	2025-11-16T16:57:52.8525560Z copying tree2cmd/__init__.py -> tree2cmd-0.2.3/tree2cmd
+publish	Build package	2025-11-16T16:57:52.8527079Z copying tree2cmd/cli.py -> tree2cmd-0.2.3/tree2cmd
+publish	Build package	2025-11-16T16:57:52.8528917Z copying tree2cmd/parser.py -> tree2cmd-0.2.3/tree2cmd
+publish	Build package	2025-11-16T16:57:52.8530958Z copying tree2cmd/utils.py -> tree2cmd-0.2.3/tree2cmd
+publish	Build package	2025-11-16T16:57:52.8532806Z copying tree2cmd.egg-info/PKG-INFO -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8534748Z copying tree2cmd.egg-info/SOURCES.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8536421Z copying tree2cmd.egg-info/dependency_links.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8538062Z copying tree2cmd.egg-info/entry_points.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8539662Z copying tree2cmd.egg-info/requires.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8541318Z copying tree2cmd.egg-info/top_level.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8543072Z copying tree2cmd.egg-info/SOURCES.txt -> tree2cmd-0.2.3/tree2cmd.egg-info
+publish	Build package	2025-11-16T16:57:52.8553083Z Writing tree2cmd-0.2.3/setup.cfg
+publish	Build package	2025-11-16T16:57:52.8555132Z Creating tar archive
+publish	Build package	2025-11-16T16:57:52.8626639Z removing 'tree2cmd-0.2.3' (and everything under it)
+publish	Build package	2025-11-16T16:57:52.9122940Z * Building wheel from sdist
+publish	Build package	2025-11-16T16:57:52.9129858Z * Creating isolated environment: venv+pip...
+publish	Build package	2025-11-16T16:57:52.9152141Z * Installing packages in isolated environment:
+publish	Build package	2025-11-16T16:57:53.8146145Z   - build
+publish	Build package	2025-11-16T16:57:53.8146530Z   - setuptools>=69
+publish	Build package	2025-11-16T16:57:53.8146768Z   - wheel
+publish	Build package	2025-11-16T16:57:53.8146987Z * Getting build dependencies for wheel...
+publish	Build package	2025-11-16T16:57:54.1098830Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+publish	Build package	2025-11-16T16:57:54.1099894Z !!
+publish	Build package	2025-11-16T16:57:54.1100018Z 
+publish	Build package	2025-11-16T16:57:54.1100499Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1101402Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+publish	Build package	2025-11-16T16:57:54.1102153Z 
+publish	Build package	2025-11-16T16:57:54.1102887Z         By 2026-Feb-18, you need to update your project and remove deprecated calls
+publish	Build package	2025-11-16T16:57:54.1103379Z         or your builds will no longer be supported.
+publish	Build package	2025-11-16T16:57:54.1103619Z 
+publish	Build package	2025-11-16T16:57:54.1104011Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.1104612Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1104868Z 
+publish	Build package	2025-11-16T16:57:54.1104951Z !!
+publish	Build package	2025-11-16T16:57:54.1914691Z   corresp(dist, value, root_dir)
+publish	Build package	2025-11-16T16:57:54.1915864Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:54.1916966Z !!
+publish	Build package	2025-11-16T16:57:54.1917112Z 
+publish	Build package	2025-11-16T16:57:54.1917257Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1917892Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:54.1918536Z 
+publish	Build package	2025-11-16T16:57:54.1918777Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:54.1919036Z 
+publish	Build package	2025-11-16T16:57:54.1919396Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.1919967Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1920193Z 
+publish	Build package	2025-11-16T16:57:54.1920276Z !!
+publish	Build package	2025-11-16T16:57:54.1920481Z   dist._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:54.1921244Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:54.1921967Z !!
+publish	Build package	2025-11-16T16:57:54.1922065Z 
+publish	Build package	2025-11-16T16:57:54.1922183Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1922870Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:54.1923281Z 
+publish	Build package	2025-11-16T16:57:54.1923399Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:54.1923619Z 
+publish	Build package	2025-11-16T16:57:54.1923942Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.1924484Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.1924703Z 
+publish	Build package	2025-11-16T16:57:54.1924783Z !!
+publish	Build package	2025-11-16T16:57:54.1924995Z   self._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:54.1934455Z running egg_info
+publish	Build package	2025-11-16T16:57:54.1950352Z writing tree2cmd.egg-info/PKG-INFO
+publish	Build package	2025-11-16T16:57:54.1960627Z writing dependency_links to tree2cmd.egg-info/dependency_links.txt
+publish	Build package	2025-11-16T16:57:54.1963234Z writing entry points to tree2cmd.egg-info/entry_points.txt
+publish	Build package	2025-11-16T16:57:54.1968755Z writing requirements to tree2cmd.egg-info/requires.txt
+publish	Build package	2025-11-16T16:57:54.1970004Z writing top-level names to tree2cmd.egg-info/top_level.txt
+publish	Build package	2025-11-16T16:57:54.2009961Z reading manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:54.2014568Z adding license file 'LICENSE'
+publish	Build package	2025-11-16T16:57:54.2022404Z writing manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:54.2284300Z * Building wheel...
+publish	Build package	2025-11-16T16:57:54.3475133Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+publish	Build package	2025-11-16T16:57:54.3476546Z !!
+publish	Build package	2025-11-16T16:57:54.3476731Z 
+publish	Build package	2025-11-16T16:57:54.3476909Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3478134Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+publish	Build package	2025-11-16T16:57:54.3479463Z 
+publish	Build package	2025-11-16T16:57:54.3479800Z         By 2026-Feb-18, you need to update your project and remove deprecated calls
+publish	Build package	2025-11-16T16:57:54.3480716Z         or your builds will no longer be supported.
+publish	Build package	2025-11-16T16:57:54.3481079Z 
+publish	Build package	2025-11-16T16:57:54.3481612Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.3482671Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3483035Z 
+publish	Build package	2025-11-16T16:57:54.3483155Z !!
+publish	Build package	2025-11-16T16:57:54.3483470Z   corresp(dist, value, root_dir)
+publish	Build package	2025-11-16T16:57:54.3648643Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:54.3649960Z !!
+publish	Build package	2025-11-16T16:57:54.3650147Z 
+publish	Build package	2025-11-16T16:57:54.3650322Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3651124Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:54.3651748Z 
+publish	Build package	2025-11-16T16:57:54.3652101Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:54.3652664Z 
+publish	Build package	2025-11-16T16:57:54.3653197Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.3654046Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3654397Z 
+publish	Build package	2025-11-16T16:57:54.3654518Z !!
+publish	Build package	2025-11-16T16:57:54.3654843Z   dist._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:54.3659730Z /tmp/build-env-0daupfz7/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+publish	Build package	2025-11-16T16:57:54.3660865Z !!
+publish	Build package	2025-11-16T16:57:54.3661037Z 
+publish	Build package	2025-11-16T16:57:54.3661208Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3661956Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+publish	Build package	2025-11-16T16:57:54.3662716Z 
+publish	Build package	2025-11-16T16:57:54.3662925Z         License :: OSI Approved :: MIT License
+publish	Build package	2025-11-16T16:57:54.3663272Z 
+publish	Build package	2025-11-16T16:57:54.3663778Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+publish	Build package	2025-11-16T16:57:54.3664616Z         ********************************************************************************
+publish	Build package	2025-11-16T16:57:54.3664977Z 
+publish	Build package	2025-11-16T16:57:54.3665098Z !!
+publish	Build package	2025-11-16T16:57:54.3665427Z   self._finalize_license_expression()
+publish	Build package	2025-11-16T16:57:54.3665890Z running bdist_wheel
+publish	Build package	2025-11-16T16:57:54.3718733Z running build
+publish	Build package	2025-11-16T16:57:54.3719106Z running build_py
+publish	Build package	2025-11-16T16:57:54.3733494Z creating build/lib/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3736337Z copying tree2cmd/utils.py -> build/lib/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3738841Z copying tree2cmd/cli.py -> build/lib/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3741326Z copying tree2cmd/parser.py -> build/lib/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3744083Z copying tree2cmd/__init__.py -> build/lib/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3745323Z running egg_info
+publish	Build package	2025-11-16T16:57:54.3757284Z writing tree2cmd.egg-info/PKG-INFO
+publish	Build package	2025-11-16T16:57:54.3767643Z writing dependency_links to tree2cmd.egg-info/dependency_links.txt
+publish	Build package	2025-11-16T16:57:54.3769639Z writing entry points to tree2cmd.egg-info/entry_points.txt
+publish	Build package	2025-11-16T16:57:54.3774670Z writing requirements to tree2cmd.egg-info/requires.txt
+publish	Build package	2025-11-16T16:57:54.3775930Z writing top-level names to tree2cmd.egg-info/top_level.txt
+publish	Build package	2025-11-16T16:57:54.3794978Z reading manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:54.3799124Z adding license file 'LICENSE'
+publish	Build package	2025-11-16T16:57:54.3807063Z writing manifest file 'tree2cmd.egg-info/SOURCES.txt'
+publish	Build package	2025-11-16T16:57:54.3831617Z installing to build/bdist.linux-x86_64/wheel
+publish	Build package	2025-11-16T16:57:54.3832388Z running install
+publish	Build package	2025-11-16T16:57:54.3888098Z running install_lib
+publish	Build package	2025-11-16T16:57:54.3899762Z creating build/bdist.linux-x86_64/wheel
+publish	Build package	2025-11-16T16:57:54.3902371Z creating build/bdist.linux-x86_64/wheel/tree2cmd
+publish	Build package	2025-11-16T16:57:54.3904172Z copying build/lib/tree2cmd/utils.py -> build/bdist.linux-x86_64/wheel/./tree2cmd
+publish	Build package	2025-11-16T16:57:54.3906198Z copying build/lib/tree2cmd/cli.py -> build/bdist.linux-x86_64/wheel/./tree2cmd
+publish	Build package	2025-11-16T16:57:54.3907883Z copying build/lib/tree2cmd/parser.py -> build/bdist.linux-x86_64/wheel/./tree2cmd
+publish	Build package	2025-11-16T16:57:54.3909706Z copying build/lib/tree2cmd/__init__.py -> build/bdist.linux-x86_64/wheel/./tree2cmd
+publish	Build package	2025-11-16T16:57:54.3910972Z running install_egg_info
+publish	Build package	2025-11-16T16:57:54.3923176Z Copying tree2cmd.egg-info to build/bdist.linux-x86_64/wheel/./tree2cmd-0.2.3-py3.11.egg-info
+publish	Build package	2025-11-16T16:57:54.3932056Z running install_scripts
+publish	Build package	2025-11-16T16:57:54.3942922Z creating build/bdist.linux-x86_64/wheel/tree2cmd-0.2.3.dist-info/WHEEL
+publish	Build package	2025-11-16T16:57:54.3947656Z creating '/home/runner/work/tree2cmd/tree2cmd/dist/.tmp-vle0acx0/tree2cmd-0.2.3-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+publish	Build package	2025-11-16T16:57:54.3950883Z adding 'tree2cmd/__init__.py'
+publish	Build package	2025-11-16T16:57:54.3953997Z adding 'tree2cmd/cli.py'
+publish	Build package	2025-11-16T16:57:54.3957050Z adding 'tree2cmd/parser.py'
+publish	Build package	2025-11-16T16:57:54.3959711Z adding 'tree2cmd/utils.py'
+publish	Build package	2025-11-16T16:57:54.3963755Z adding 'tree2cmd-0.2.3.dist-info/licenses/LICENSE'
+publish	Build package	2025-11-16T16:57:54.3967724Z adding 'tree2cmd-0.2.3.dist-info/METADATA'
+publish	Build package	2025-11-16T16:57:54.3969149Z adding 'tree2cmd-0.2.3.dist-info/WHEEL'
+publish	Build package	2025-11-16T16:57:54.3971276Z adding 'tree2cmd-0.2.3.dist-info/entry_points.txt'
+publish	Build package	2025-11-16T16:57:54.3972709Z adding 'tree2cmd-0.2.3.dist-info/top_level.txt'
+publish	Build package	2025-11-16T16:57:54.3975224Z adding 'tree2cmd-0.2.3.dist-info/RECORD'
+publish	Build package	2025-11-16T16:57:54.3976204Z removing build/bdist.linux-x86_64/wheel
+publish	Build package	2025-11-16T16:57:54.4402127Z Successfully built tree2cmd-0.2.3.tar.gz and tree2cmd-0.2.3-py3-none-any.whl
+publish	Check wheels and sdists	﻿2025-11-16T16:57:54.4569563Z ##[group]Run twine check dist/*
+publish	Check wheels and sdists	2025-11-16T16:57:54.4569872Z [36;1mtwine check dist/*[0m
+publish	Check wheels and sdists	2025-11-16T16:57:54.4602243Z shell: /usr/bin/bash -e {0}
+publish	Check wheels and sdists	2025-11-16T16:57:54.4602591Z env:
+publish	Check wheels and sdists	2025-11-16T16:57:54.4602843Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Check wheels and sdists	2025-11-16T16:57:54.4603270Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Check wheels and sdists	2025-11-16T16:57:54.4603674Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Check wheels and sdists	2025-11-16T16:57:54.4604030Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Check wheels and sdists	2025-11-16T16:57:54.4604382Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Check wheels and sdists	2025-11-16T16:57:54.4604747Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Check wheels and sdists	2025-11-16T16:57:54.4605056Z ##[endgroup]
+publish	Check wheels and sdists	2025-11-16T16:57:54.6945539Z Checking dist/tree2cmd-0.2.3-py3-none-any.whl: [32mPASSED[0m
+publish	Check wheels and sdists	2025-11-16T16:57:54.6987428Z Checking dist/tree2cmd-0.2.3.tar.gz: [32mPASSED[0m
+publish	Upload build artifacts	﻿2025-11-16T16:57:54.7385365Z ##[group]Run actions/upload-artifact@v4
+publish	Upload build artifacts	2025-11-16T16:57:54.7385664Z with:
+publish	Upload build artifacts	2025-11-16T16:57:54.7385832Z   name: dist
+publish	Upload build artifacts	2025-11-16T16:57:54.7386004Z   path: dist/
+publish	Upload build artifacts	2025-11-16T16:57:54.7386178Z   if-no-files-found: warn
+publish	Upload build artifacts	2025-11-16T16:57:54.7386386Z   compression-level: 6
+publish	Upload build artifacts	2025-11-16T16:57:54.7386578Z   overwrite: false
+publish	Upload build artifacts	2025-11-16T16:57:54.7386766Z   include-hidden-files: false
+publish	Upload build artifacts	2025-11-16T16:57:54.7386978Z env:
+publish	Upload build artifacts	2025-11-16T16:57:54.7387210Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Upload build artifacts	2025-11-16T16:57:54.7387616Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Upload build artifacts	2025-11-16T16:57:54.7387995Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Upload build artifacts	2025-11-16T16:57:54.7388341Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Upload build artifacts	2025-11-16T16:57:54.7388690Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Upload build artifacts	2025-11-16T16:57:54.7389032Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Upload build artifacts	2025-11-16T16:57:54.7389319Z ##[endgroup]
+publish	Upload build artifacts	2025-11-16T16:57:54.9646542Z With the provided path, there will be 2 files uploaded
+publish	Upload build artifacts	2025-11-16T16:57:54.9653018Z Artifact name is valid!
+publish	Upload build artifacts	2025-11-16T16:57:54.9654602Z Root directory input is valid!
+publish	Upload build artifacts	2025-11-16T16:57:55.2795452Z Beginning upload of artifact content to blob storage
+publish	Upload build artifacts	2025-11-16T16:57:55.6569962Z Uploaded bytes 23248
+publish	Upload build artifacts	2025-11-16T16:57:55.7380105Z Finished uploading artifact content to blob storage!
+publish	Upload build artifacts	2025-11-16T16:57:55.7383194Z SHA256 digest of uploaded artifact zip is 306a73694921fc30add960d4eb47c8eaf994ee399a0ccc5f52420b669131be20
+publish	Upload build artifacts	2025-11-16T16:57:55.7385062Z Finalizing artifact upload
+publish	Upload build artifacts	2025-11-16T16:57:55.8749951Z Artifact dist.zip successfully finalized. Artifact ID 4581847614
+publish	Upload build artifacts	2025-11-16T16:57:55.8751049Z Artifact dist has been successfully uploaded! Final size is 23248 bytes. Artifact ID is 4581847614
+publish	Upload build artifacts	2025-11-16T16:57:55.8758596Z Artifact download URL: https://github.com/ajmanjoma/tree2cmd/actions/runs/19408951102/artifacts/4581847614
+publish	Publish to TestPyPI	﻿2025-11-16T16:57:55.8925472Z ##[group]Run pypa/gh-action-pypi-publish@release/v1
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8925817Z with:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8926066Z   repository-url: https://test.pypi.org/legacy/
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8926350Z   user: __token__
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8926595Z   repository_url: https://upload.pypi.org/legacy/
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8926881Z   packages_dir: dist
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8927073Z   verify_metadata: true
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8927284Z   skip_existing: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8927478Z   verbose: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8927664Z   print_hash: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8927853Z   attestations: true
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8928032Z env:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8928265Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8928673Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8929070Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8929422Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8929769Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8930171Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Publish to TestPyPI	2025-11-16T16:57:55.8930462Z ##[endgroup]
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9005527Z ##[group]Run # Reset path if needed
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9005846Z [36;1m# Reset path if needed[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9006210Z [36;1m# https://github.com/pypa/gh-action-pypi-publish/issues/112[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9006582Z [36;1mif [[ $PATH != *"/usr/bin"* ]]; then[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9006916Z [36;1m  echo "\$PATH=$PATH. Resetting \$PATH for GitHub Actions."[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9007321Z [36;1m  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9007683Z [36;1m  echo "PATH=$PATH" >>"$GITHUB_ENV"[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9007956Z [36;1m  echo "$PATH" >>"$GITHUB_PATH"[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9008225Z [36;1m  echo "\$PATH reset. \$PATH=$PATH"[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9008473Z [36;1mfi[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9042982Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9043332Z env:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9043584Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9044003Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9044402Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9044756Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9045121Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9045480Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9045783Z ##[endgroup]
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9124116Z ##[group]Run # 🔎 Discover pre-installed Python
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9124451Z [36;1m# 🔎 Discover pre-installed Python[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9124843Z [36;1mecho "python-path=$(command -v python3 || :)" | tee -a "${GITHUB_OUTPUT}"[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9155267Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9155604Z env:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9155849Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9156423Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9156839Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9157198Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9157560Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9157932Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9158233Z ##[endgroup]
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9219699Z python-path=/opt/hostedtoolcache/Python/3.11.14/x64/bin/python3
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9283195Z ##[group]Run # Create Docker container action
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9283507Z [36;1m# Create Docker container action[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9284163Z [36;1m/opt/hostedtoolcache/Python/3.11.14/x64/bin/python3 '/home/runner/work/_actions/pypa/gh-action-pypi-publish/release/v1/create-docker-action.py'[0m
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9314665Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9314987Z env:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9315241Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9315659Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9316059Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9316416Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9316785Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9317139Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9317433Z   REF: release/v1
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9317648Z   REPO: pypa/gh-action-pypi-publish
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9317896Z   REPO_ID: 1018730350
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9318094Z ##[endgroup]
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9688479Z ##[group]Run ./.github/.tmp/.generated-actions/run-pypi-publish-in-docker-container
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9688909Z with:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9689092Z   user: __token__
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9689342Z   repository-url: https://test.pypi.org/legacy/
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9689638Z   packages-dir: dist
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9689834Z   verify-metadata: true
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9690038Z   skip-existing: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9690237Z   verbose: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9690422Z   print-hash: false
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9690612Z   attestations: true
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9690790Z env:
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9691022Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9691616Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9692031Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9692387Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9692962Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9693311Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9693608Z ##[endgroup]
+publish	Publish to TestPyPI	2025-11-16T16:57:55.9821473Z ##[command]/usr/bin/docker run --name ghcriopypaghactionpypipublishreleasev1_5704de --label 0d6298 --workdir /github/workspace --rm -e "pythonLocation" -e "PKG_CONFIG_PATH" -e "Python_ROOT_DIR" -e "Python2_ROOT_DIR" -e "Python3_ROOT_DIR" -e "LD_LIBRARY_PATH" -e "INPUT_USER" -e "INPUT_PASSWORD" -e "INPUT_REPOSITORY-URL" -e "INPUT_PACKAGES-DIR" -e "INPUT_VERIFY-METADATA" -e "INPUT_SKIP-EXISTING" -e "INPUT_VERBOSE" -e "INPUT_PRINT-HASH" -e "INPUT_ATTESTATIONS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ACTION_PATH" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/tree2cmd/tree2cmd":"/github/workspace" ghcr.io/pypa/gh-action-pypi-publish:release-v1
+publish	Publish to TestPyPI	2025-11-16T16:57:56.0677000Z Unable to find image 'ghcr.io/pypa/gh-action-pypi-publish:release-v1' locally
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7029624Z release-v1: Pulling from pypa/gh-action-pypi-publish
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7031438Z 6e0d6626b028: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7031906Z 7b1ad37e982c: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7032201Z 31b0d2470ce1: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7032731Z 8c141999d083: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7033041Z 6ad5a334a1c3: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7033334Z 1d9261df0a43: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7033616Z 8d984121c369: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7033895Z 96c84f895532: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7034165Z 912833a16df9: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7034442Z 15b5df32596c: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7034717Z d4289cea1034: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7035006Z 8380019ec1fc: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7035276Z 8c141999d083: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7035518Z f5d447a84c58: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7035763Z 4f4fb700ef54: Pulling fs layer
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7035973Z 6ad5a334a1c3: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7036176Z 1d9261df0a43: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7036357Z 15b5df32596c: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7036539Z 8d984121c369: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7036720Z d4289cea1034: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7036895Z 96c84f895532: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7037080Z 8380019ec1fc: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7037259Z f5d447a84c58: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7037434Z 912833a16df9: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:56.7037611Z 4f4fb700ef54: Waiting
+publish	Publish to TestPyPI	2025-11-16T16:57:57.0751397Z 31b0d2470ce1: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.0752363Z 31b0d2470ce1: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.2822900Z 8c141999d083: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.2823506Z 8c141999d083: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.3699528Z 6e0d6626b028: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.3700119Z 6e0d6626b028: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.5048658Z 6ad5a334a1c3: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.5049977Z 6ad5a334a1c3: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.6058372Z 7b1ad37e982c: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.6059670Z 7b1ad37e982c: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.7160334Z 8d984121c369: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.7162679Z 8d984121c369: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.8287698Z 96c84f895532: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:57.9339960Z 912833a16df9: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:57.9342632Z 912833a16df9: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.0491883Z 15b5df32596c: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.0492654Z 15b5df32596c: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.1576217Z d4289cea1034: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.1576719Z d4289cea1034: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.2595202Z 8380019ec1fc: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.2596933Z 8380019ec1fc: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.3144320Z 6e0d6626b028: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.3599307Z f5d447a84c58: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.3599865Z f5d447a84c58: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.4249273Z 4f4fb700ef54: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.4249646Z 4f4fb700ef54: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:58.9865636Z 1d9261df0a43: Verifying Checksum
+publish	Publish to TestPyPI	2025-11-16T16:57:58.9866166Z 1d9261df0a43: Download complete
+publish	Publish to TestPyPI	2025-11-16T16:57:59.6026490Z 7b1ad37e982c: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:00.1973244Z 31b0d2470ce1: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:00.2090789Z 8c141999d083: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:00.2205756Z 6ad5a334a1c3: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4057661Z 1d9261df0a43: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4162371Z 8d984121c369: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4270620Z 96c84f895532: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4361059Z 912833a16df9: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4449554Z 15b5df32596c: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4573279Z d4289cea1034: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4686072Z 8380019ec1fc: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4783870Z f5d447a84c58: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4859643Z 4f4fb700ef54: Pull complete
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4891538Z Digest: sha256:10b09cfb1f96809cac141fcd2b0800184ce6bb17aee65e4ff4ab77db03d6203d
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4902643Z Status: Downloaded newer image for ghcr.io/pypa/gh-action-pypi-publish:release-v1
+publish	Publish to TestPyPI	2025-11-16T16:58:03.1761793Z ##[error]Trusted publishing exchange failure: 
+publish	Publish to TestPyPI	Token request failed: the server refused the request for the following reasons:
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	* `invalid-publisher`: valid token, but no corresponding publisher (Publisher with matching claims was not found)
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	This generally indicates a trusted publisher configuration error, but could
+publish	Publish to TestPyPI	also indicate an internal error on GitHub or PyPI's part.
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	The claims rendered below are **for debugging purposes only**. You should **not**
+publish	Publish to TestPyPI	use them to configure a trusted publisher unless they already match your expectations.
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	If a claim is not present in the claim set, then it is rendered as `MISSING`.
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	* `sub`: `repo:ajmanjoma/tree2cmd:ref:refs/heads/main`
+publish	Publish to TestPyPI	* `repository`: `ajmanjoma/tree2cmd`
+publish	Publish to TestPyPI	* `repository_owner`: `ajmanjoma`
+publish	Publish to TestPyPI	* `repository_owner_id`: `48788499`
+publish	Publish to TestPyPI	* `workflow_ref`: `ajmanjoma/tree2cmd/.github/workflows/testpypi.yml@refs/heads/main`
+publish	Publish to TestPyPI	* `job_workflow_ref`: `ajmanjoma/tree2cmd/.github/workflows/testpypi.yml@refs/heads/main`
+publish	Publish to TestPyPI	* `ref`: `refs/heads/main`
+publish	Publish to TestPyPI	* `environment`: `MISSING`
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	See https://docs.pypi.org/trusted-publishers/troubleshooting/ for more help.
+publish	Publish to TestPyPI	
+publish	Publish to TestPyPI	
+publish	Post Publish to TestPyPI	﻿2025-11-16T16:58:03.2877143Z Post job cleanup.
+publish	Post Checkout repository	﻿2025-11-16T16:58:03.2924275Z Post job cleanup.
+publish	Post Checkout repository	2025-11-16T16:58:03.3872172Z [command]/usr/bin/git version
+publish	Post Checkout repository	2025-11-16T16:58:03.3924882Z git version 2.51.2
+publish	Post Checkout repository	2025-11-16T16:58:03.3980388Z Temporarily overriding HOME='/home/runner/work/_temp/23f75f1f-7942-4b9d-941d-a04de2114729' before making global git config changes
+publish	Post Checkout repository	2025-11-16T16:58:03.3981702Z Adding repository directory to the temporary git global config as a safe directory
+publish	Post Checkout repository	2025-11-16T16:58:03.3994499Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tree2cmd/tree2cmd
+publish	Post Checkout repository	2025-11-16T16:58:03.4030675Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	Post Checkout repository	2025-11-16T16:58:03.4063939Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	Post Checkout repository	2025-11-16T16:58:03.4302068Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	Post Checkout repository	2025-11-16T16:58:03.4323658Z http.https://github.com/.extraheader
+publish	Post Checkout repository	2025-11-16T16:58:03.4336660Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+publish	Post Checkout repository	2025-11-16T16:58:03.4367619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	Complete job	﻿2025-11-16T16:58:03.4710118Z Cleaning up orphan processes

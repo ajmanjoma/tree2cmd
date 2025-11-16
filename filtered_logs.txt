@@ -1,37 +1,10 @@
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:10.5485301Z ##[endgroup]
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:10.7171978Z ##[group]Installed versions
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:10.7270489Z Version 3.8 was not found in the local cache
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:11.1424163Z Version 3.8 is available for downloading
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:11.1426420Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4891538Z Digest: sha256:10b09cfb1f96809cac141fcd2b0800184ce6bb17aee65e4ff4ab77db03d6203d
+publish	Publish to TestPyPI	2025-11-16T16:58:01.4902643Z Status: Downloaded newer image for ghcr.io/pypa/gh-action-pypi-publish:release-v1
+publish	Publish to TestPyPI	2025-11-16T16:58:03.1761793Z ##[error]Trusted publishing exchange failure: 
+publish	Publish to TestPyPI	Token request failed: the server refused the request for the following reasons:
+publish	Publish to TestPyPI	
 
 --------------------------------------------------------------------------------
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:17.8743560Z [command]/opt/hostedtoolcache/Python/3.8.18/x64/bin/pip cache dir
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:18.0315774Z /home/runner/.cache/pip
-tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:52:18.1021552Z pip cache is not found
-tests (3.8)	Install dependencies	﻿2025-11-16T15:52:18.1187353Z ##[group]Run pip install -e .
-tests (3.8)	Install dependencies	2025-11-16T15:52:18.1187696Z [36;1mpip install -e .[0m
-tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:52:12.9316729Z [command]/opt/hostedtoolcache/Python/3.12.12/x64/bin/pip cache dir
-tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:52:13.2711255Z /home/runner/.cache/pip
-tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:52:13.5466161Z pip cache is not found
-tests (3.12)	Install dependencies	﻿2025-11-16T15:52:13.5594812Z ##[group]Run pip install -e .
-tests (3.12)	Install dependencies	2025-11-16T15:52:13.5595391Z [36;1mpip install -e .[0m
-tests (3.12)	Run tests	2025-11-16T15:52:26.5778438Z 
-tests (3.12)	Run tests	2025-11-16T15:52:26.5778641Z NO TESTS RAN
-tests (3.12)	Run tests	2025-11-16T15:52:26.5882294Z ##[error]Process completed with exit code 5.
-tests (3.12)	Post Run actions/checkout@v4	﻿2025-11-16T15:52:26.5977292Z Post job cleanup.
-tests (3.12)	Post Run actions/checkout@v4	2025-11-16T15:52:26.6911755Z [command]/usr/bin/git version
-tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:52:12.2215986Z [command]/opt/hostedtoolcache/Python/3.9.25/x64/bin/pip cache dir
-tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:52:12.5738836Z /home/runner/.cache/pip
-tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:52:12.8582203Z pip cache is not found
-tests (3.9)	Install dependencies	﻿2025-11-16T15:52:12.8719467Z ##[group]Run pip install -e .
-tests (3.9)	Install dependencies	2025-11-16T15:52:12.8719845Z [36;1mpip install -e .[0m
-tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:52:12.1364485Z [command]/opt/hostedtoolcache/Python/3.11.14/x64/bin/pip cache dir
-tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:52:12.4409730Z /home/runner/.cache/pip
-tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:52:12.6352356Z pip cache is not found
-tests (3.11)	Install dependencies	﻿2025-11-16T15:52:12.6489628Z ##[group]Run pip install -e .
-tests (3.11)	Install dependencies	2025-11-16T15:52:12.6490028Z [36;1mpip install -e .[0m
-tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:52:12.1916661Z [command]/opt/hostedtoolcache/Python/3.10.19/x64/bin/pip cache dir
-tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:52:12.4899157Z /home/runner/.cache/pip
-tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:52:12.6654361Z pip cache is not found
-tests (3.10)	Install dependencies	﻿2025-11-16T15:52:12.6782801Z ##[group]Run pip install -e .
-tests (3.10)	Install dependencies	2025-11-16T15:52:12.6783171Z [36;1mpip install -e .[0m
+publish	Publish to TestPyPI	* `invalid-publisher`: valid token, but no corresponding publisher (Publisher with matching claims was not found)
+publish	Publish to TestPyPI	This generally indicates a trusted publisher configuration error, but could
+publish	Publish to TestPyPI	also indicate an internal error on GitHub or PyPI's part.
