@@ -1,9 +1,7 @@
 
 # 📘 tree2cmd
 
-tree2cmd is a lightweight Python tool that instantly converts a text-based directory tree (like struct.txt) into real folders and files. It supports both ASCII and Unicode tree formats—including emojis—and generates safe shell commands using mkdir -p and touch.
 
-It is perfect for quickly bootstrapping new projects, sharing folder layouts, automating templates, teaching directory structures, and turning documentation examples into actual directories.
 
 ### Convert text-based directory trees into real folders and files.
 
@@ -12,7 +10,8 @@ It is perfect for quickly bootstrapping new projects, sharing folder layouts, au
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Tests](https://img.shields.io/badge/tests-100%25-success)
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-green)
-[![Build](https://github.com/ajmanjoma/tree2cmd/actions/workflows/python-tests.yml/badge.svg)](https://github.com/ajmanjoma/tree2cmd/actions)
+[![Tests](https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml/badge.svg)](https://github.com/ajmanjoma/tree2cmd/actions/workflows/tests.yml)
+
 ![Downloads](https://img.shields.io/pypi/dm/tree2cmd.svg)
 
 ---
