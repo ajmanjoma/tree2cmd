@@ -1,37 +1,55 @@
-name: tests
+name: Python Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  tests:
+    name: Run Tests on Python Versions
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          python-version: "3.11"
+          fetch-depth: 0
 
-      - name: Install project
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -e .
           pip install -r requirements.txt
           pip install mypy flake8 black
 
-      - name: Run type checks
+      - name: Static type checks (mypy)
         run: |
           mypy tree2cmd
 
-      - name: Run lint (flake8)
+      - name: Lint (flake8)
         run: |
           flake8 tree2cmd
 
-      - name: Run lint (black --check)
+      - name: Verify formatting (black)
         run: |
           black --check tree2cmd
 
-      - name: Run tests
+      - name: Run unit tests
         run: |
           python -m unittest discover -v

@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: tree2cmd
-Version: 0.2.1
+Version: 0.2.2
 Summary: Convert text directory trees (struct.txt) into real folders and files.
 Home-page: https://github.com/ajmanjoma/tree2cmd
 Author: Antony Joseph Mathew
@@ -71,19 +71,56 @@ Dynamic: requires-python
 
 # 📘 tree2cmd
 
-tree2cmd is a lightweight Python tool that instantly converts a text-based directory tree (like struct.txt) into real folders and files. It supports both ASCII and Unicode tree formats—including emojis—and generates safe shell commands using mkdir -p and touch.
-
-It is perfect for quickly bootstrapping new projects, sharing folder layouts, automating templates, teaching directory structures, and turning documentation examples into actual directories.
 
 ### Convert text-based directory trees into real folders and files.
 
-[![PyPI Version](https://img.shields.io/pypi/v/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/tree2cmd.svg)](https://pypi.org/project/tree2cmd/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Tests](https://img.shields.io/badge/tests-100%25-success)
-![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-green)
-[![Build](https://github.com/ajmanjoma/tree2cmd/actions/workflows/python-tests.yml/badge.svg)](https://github.com/ajmanjoma/tree2cmd/actions)
-![Downloads](https://img.shields.io/pypi/dm/tree2cmd.svg)
+<p align="center">
+
+  <!-- PyPI -->
+  <a href="https://pypi.org/project/tree2cmd/">
+    <img src="https://img.shields.io/pypi/v/tree2cmd.svg" alt="PyPI Version">
+  </a>
+
+  <!-- Python Versions -->
+  <a href="https://pypi.org/project/tree2cmd/">
+    <img src="https://img.shields.io/pypi/pyversions/tree2cmd.svg" alt="Python Versions">
+  </a>
+
+  <!-- License -->
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License">
+  </a>
+
+  <!-- Tests 100% -->
+  <img src="https://img.shields.io/badge/tests-100%25-success" alt="Tests 100%">
+
+  <!-- Platform -->
+  <img src="https://img.shields.io/badge/platform-linux%20%7C%20macos-green" alt="Platforms">
+
+  <!-- Downloads -->
+  <img src="https://img.shields.io/pypi/dm/tree2cmd.svg" alt="PyPI Downloads">
+
+  <!-- GitHub Actions: Tests -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/python_tests.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/python_tests.yml/badge.svg" alt="GitHub Tests Status">
+  </a>
+
+  <!-- GitHub Actions: TestPyPI -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml/badge.svg" alt="Publish to TestPyPI">
+  </a>
+
+  <!-- GitHub Actions: PyPI Publish -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/publish.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/publish.yml/badge.svg" alt="Publish to PyPI">
+  </a>
+
+  <!-- GitHub Actions: Auto Bump -->
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/bump.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/bump.yml/badge.svg" alt="Auto Version Bump">
+  </a>
+
+</p>
 
 ---
 
