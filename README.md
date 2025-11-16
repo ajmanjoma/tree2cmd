@@ -1,6 +1,9 @@
 # tree2cmd
 
-Convert tree-style directory text into shell commands (`mkdir` and `touch`).
+tree2cmd — Turn a text tree (struct.txt) into real folders & files
+
+tree2cmd lets you write your project structure inside a simple text file called struct.txt, and then convert it into actual directories and files.
+Fast, clean, and perfect for setting up new project templates.
 
 ---
 
