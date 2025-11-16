@@ -36,13 +36,13 @@ jobs:
 
           if echo "$MSG" | grep -q "#bump-major"; then
             echo "type=major" >> $GITHUB_OUTPUT
-            bump2version major --allow-dirty --message " MAJOR: Version bumped to {new_version} [CI Auto]"
+            bump2version major --allow-dirty --message "🔺 MAJOR: Version bumped to {new_version} [CI Auto]"
           elif echo "$MSG" | grep -q "#bump-minor"; then
             echo "type=minor" >> $GITHUB_OUTPUT
-            bump2version minor --allow-dirty --message " MINOR: Version bumped to {new_version} [CI Auto]"
+            bump2version minor --allow-dirty --message "🔸 MINOR: Version bumped to {new_version} [CI Auto]"
           else
             echo "type=patch" >> $GITHUB_OUTPUT
-            bump2version patch --allow-dirty --message " PATCH: Version bumped to {new_version} [CI Auto]"
+            bump2version patch --allow-dirty --message "🔹 PATCH: Version bumped to {new_version} [CI Auto]"
           fi
 
       - name: Push updated version + tags
@@ -51,4 +51,4 @@ jobs:
           git push --tags
 
       - name: Workflow Summary
-        run: echo "Version bump completed: ${{ steps.bump.outputs.type }}"
+        run:  Version bump completed: ${{ steps.bump.outputs.type }}
