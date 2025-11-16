@@ -1,10 +1,10 @@
 name: Publish to TestPyPI
 
 on:
-  workflow_dispatch:  # manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
-  id-token: write      # for OIDC (trusted publishing)
+  id-token: write
   contents: read
 
 jobs:
@@ -31,17 +31,16 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Check wheels and sdists
+      - name: Validate distribution files
         run: twine check dist/*
 
-      - name: Upload build artifacts
+      - name: Upload dist artifacts
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
 
-      - name: Publish to TestPyPI
+      - name: Publish to TestPyPI (Trusted Publishing)
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-          # No `password:` needed if TestPyPI is configured for Trusted Publishing

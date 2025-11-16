@@ -3,9 +3,10 @@ name: Publish to PyPI
 on:
   push:
     tags:
-      - "v*.*.*"   # runs when you push a tag like v0.2.1
+      - "v*.*.*"
 
 permissions:
+  id-token: write
   contents: read
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # good practice for tagged builds
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,7 +33,7 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Check distribution files
+      - name: Validate distribution files
         run: twine check dist/*
 
       - name: Publish to PyPI
