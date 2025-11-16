@@ -1,2 +1,0 @@
-[console_scripts]
-tree2cmd = tree2cmd.cli:main

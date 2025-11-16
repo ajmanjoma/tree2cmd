@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 setup.py
+tests/test_ascii_tree.py
 tests/test_cli.py
 tests/test_integration.py
 tests/test_parser.py
