@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"
 # ============================================================
 [project]
 name = "tree2cmd"
-version = "0.2.1"                  # IMPORTANT: bump2version syncs this
+version = "0.2.2"                  # IMPORTANT: bump2version syncs this
 description = "Convert text directory trees (struct.txt) into real folders and files."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -121,7 +121,7 @@ include = ["tree2cmd"]
 # bump2version Automation
 # ============================================================
 [tool.bumpversion]
-current_version = "0.2.1"
+current_version = "0.2.2"
 commit = true
 tag = true
 
