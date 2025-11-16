@@ -36,8 +36,8 @@
   </a>
 
   <!-- GitHub Actions: TestPyPI -->
-  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml">
-    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml/badge.svg" alt="Publish to TestPyPI">
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tree2cmd_publish_test.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tree2cmd_publish_test.yml/badge.svg" alt="Publish to TestPyPI">
   </a>
 
   <!-- GitHub Actions: PyPI Publish -->
