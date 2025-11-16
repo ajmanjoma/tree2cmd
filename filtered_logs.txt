@@ -1,0 +1,57 @@
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:26.4454582Z ##[endgroup]
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:26.6135987Z ##[group]Installed versions
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:26.6236322Z Version 3.8 was not found in the local cache
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:27.5817518Z Version 3.8 is available for downloading
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:27.5819597Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+
+--------------------------------------------------------------------------------
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:34.1889646Z [command]/opt/hostedtoolcache/Python/3.8.18/x64/bin/pip cache dir
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:34.3506869Z /home/runner/.cache/pip
+tests (3.8)	Run actions/setup-python@v5	2025-11-16T15:24:34.6130300Z pip cache is not found
+tests (3.8)	Install dependencies	﻿2025-11-16T15:24:34.6290143Z ##[group]Run pip install -e .
+tests (3.8)	Install dependencies	2025-11-16T15:24:34.6290476Z [36;1mpip install -e .[0m
+tests (3.8)	Format check (black)	2025-11-16T15:24:47.0252271Z Oh no! 💥 💔 💥
+tests (3.8)	Format check (black)	2025-11-16T15:24:47.0252727Z 1 file would be reformatted, 3 files would be left unchanged.
+tests (3.8)	Format check (black)	2025-11-16T15:24:47.0488993Z ##[error]Process completed with exit code 1.
+tests (3.8)	Post Run actions/checkout@v4	﻿2025-11-16T15:24:47.0586677Z Post job cleanup.
+tests (3.8)	Post Run actions/checkout@v4	2025-11-16T15:24:47.1514324Z [command]/usr/bin/git version
+tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:24:29.0095434Z [command]/opt/hostedtoolcache/Python/3.9.25/x64/bin/pip cache dir
+tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:24:29.3622514Z /home/runner/.cache/pip
+tests (3.9)	Run actions/setup-python@v5	2025-11-16T15:24:29.6211208Z pip cache is not found
+tests (3.9)	Install dependencies	﻿2025-11-16T15:24:29.6351528Z ##[group]Run pip install -e .
+tests (3.9)	Install dependencies	2025-11-16T15:24:29.6351883Z [36;1mpip install -e .[0m
+tests (3.9)	Format check (black)	2025-11-16T15:24:44.2871401Z Oh no! 💥 💔 💥
+tests (3.9)	Format check (black)	2025-11-16T15:24:44.2871810Z 1 file would be reformatted, 3 files would be left unchanged.
+tests (3.9)	Format check (black)	2025-11-16T15:24:44.3079240Z ##[error]Process completed with exit code 1.
+tests (3.9)	Post Run actions/checkout@v4	﻿2025-11-16T15:24:44.3175110Z Post job cleanup.
+tests (3.9)	Post Run actions/checkout@v4	2025-11-16T15:24:44.4110875Z [command]/usr/bin/git version
+tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:24:27.9466114Z [command]/opt/hostedtoolcache/Python/3.12.12/x64/bin/pip cache dir
+tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:24:29.6646263Z /home/runner/.cache/pip
+tests (3.12)	Run actions/setup-python@v5	2025-11-16T15:24:29.7755560Z pip cache is not found
+tests (3.12)	Install dependencies	﻿2025-11-16T15:24:29.7885413Z ##[group]Run pip install -e .
+tests (3.12)	Install dependencies	2025-11-16T15:24:29.7885764Z [36;1mpip install -e .[0m
+tests (3.12)	Format check (black)	2025-11-16T15:24:45.3960273Z Oh no! 💥 💔 💥
+tests (3.12)	Format check (black)	2025-11-16T15:24:45.3960730Z 1 file would be reformatted, 3 files would be left unchanged.
+tests (3.12)	Format check (black)	2025-11-16T15:24:45.4195685Z ##[error]Process completed with exit code 1.
+tests (3.12)	Post Run actions/checkout@v4	﻿2025-11-16T15:24:45.4294319Z Post job cleanup.
+tests (3.12)	Post Run actions/checkout@v4	2025-11-16T15:24:45.5230359Z [command]/usr/bin/git version
+tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:24:25.4886534Z [command]/opt/hostedtoolcache/Python/3.10.19/x64/bin/pip cache dir
+tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:24:27.7230434Z /home/runner/.cache/pip
+tests (3.10)	Run actions/setup-python@v5	2025-11-16T15:24:27.8716320Z pip cache is not found
+tests (3.10)	Install dependencies	﻿2025-11-16T15:24:27.8860485Z ##[group]Run pip install -e .
+tests (3.10)	Install dependencies	2025-11-16T15:24:27.8860871Z [36;1mpip install -e .[0m
+tests (3.10)	Format check (black)	2025-11-16T15:24:44.0643160Z Oh no! 💥 💔 💥
+tests (3.10)	Format check (black)	2025-11-16T15:24:44.0643683Z 1 file would be reformatted, 3 files would be left unchanged.
+tests (3.10)	Format check (black)	2025-11-16T15:24:44.0863042Z ##[error]Process completed with exit code 1.
+tests (3.10)	Post Run actions/checkout@v4	﻿2025-11-16T15:24:44.0962459Z Post job cleanup.
+tests (3.10)	Post Run actions/checkout@v4	2025-11-16T15:24:44.1906466Z [command]/usr/bin/git version
+tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:24:28.3355246Z [command]/opt/hostedtoolcache/Python/3.11.14/x64/bin/pip cache dir
+tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:24:29.4799135Z /home/runner/.cache/pip
+tests (3.11)	Run actions/setup-python@v5	2025-11-16T15:24:29.6912618Z pip cache is not found
+tests (3.11)	Install dependencies	﻿2025-11-16T15:24:29.7017428Z ##[group]Run pip install -e .
+tests (3.11)	Install dependencies	2025-11-16T15:24:29.7017812Z [36;1mpip install -e .[0m
+tests (3.11)	Format check (black)	2025-11-16T15:24:43.2031011Z Oh no! 💥 💔 💥
+tests (3.11)	Format check (black)	2025-11-16T15:24:43.2031360Z 1 file would be reformatted, 3 files would be left unchanged.
+tests (3.11)	Format check (black)	2025-11-16T15:24:43.2245136Z ##[error]Process completed with exit code 1.
+tests (3.11)	Post Run actions/checkout@v4	﻿2025-11-16T15:24:43.2335465Z Post job cleanup.
+tests (3.11)	Post Run actions/checkout@v4	2025-11-16T15:24:43.3186724Z [command]/usr/bin/git version

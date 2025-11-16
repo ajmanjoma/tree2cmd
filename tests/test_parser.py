@@ -22,11 +22,7 @@ class TestParser(unittest.TestCase):
         """
         result = parse_tree(text)
 
-        expected = [
-            ("Project", True),
-            ("Project/src", True),
-            ("Project/src/main.py", False)
-        ]
+        expected = [("Project", True), ("Project/src", True), ("Project/src/main.py", False)]
 
         self.assertEqual(result, expected)
 
@@ -39,11 +35,7 @@ class TestParser(unittest.TestCase):
 
         result = parse_tree(text)
 
-        expected = [
-            ("📦 App", True),
-            ("📦 App/backend", True),
-            ("📦 App/backend/api.py", False)
-        ]
+        expected = [("📦 App", True), ("📦 App/backend", True), ("📦 App/backend/api.py", False)]
 
         self.assertEqual(result, expected)
 

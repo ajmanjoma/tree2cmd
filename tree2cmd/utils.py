@@ -33,7 +33,7 @@ def tree_from_shell_commands(commands: List[str]) -> str:
             continue
 
         # Extract the final quoted path
-        path = cmd.split()[-1].strip('"\'')
+        path = cmd.split()[-1].strip("\"'")
         parts = [p for p in path.split("/") if p]
 
         # Insert into tree structure
@@ -54,7 +54,7 @@ def tree_from_shell_commands(commands: List[str]) -> str:
         items = sorted(d.keys())
 
         for i, name in enumerate(items):
-            is_last = (i == len(items) - 1)
+            is_last = i == len(items) - 1
             connector = "└── " if is_last else "├── "
             lines.append(f"{prefix}{connector}{name}")
 
