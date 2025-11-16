@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   tests:
-    name: Run Tests on Python Versions
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,36 +19,27 @@ jobs:
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: "pip"
+          cache: pip
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
           pip install -e .
           pip install -r requirements.txt
-          pip install mypy flake8==7.1.1 black
+          pip install black flake8 mypy
 
-      - name: Static type checks (mypy)
-        run: |
-          mypy tree2cmd
+      - name: Mypy type check
+        run: mypy tree2cmd
 
       - name: Lint (flake8)
-        run: |
-          flake8 tree2cmd
+        run: flake8 tree2cmd
 
-      - name: Verify formatting (black)
-        run: |
-          black --check tree2cmd
+      - name: Format check (black)
+        run: black --check tree2cmd
 
-      - name: Run unit tests
-        run: |
-          python -m unittest discover -v
+      - name: Run tests
+        run: python -m unittest discover -v
