@@ -13,7 +13,7 @@ MAJOR.MINOR.PATCH
 
 ---
 
-## 🟢 **0.1.4 – (Current Release)**
+## 🟢 **0.2.1 – (Current Release)**
 
 **Status:** *In development*
 
@@ -47,7 +47,7 @@ MAJOR.MINOR.PATCH
 
 ---
 
-## 🟢 **0.1.3**
+## 🟢 **0.2.1**
 
 ### ✨ Added
 
@@ -57,7 +57,7 @@ MAJOR.MINOR.PATCH
 * CLI improvements
 * Basic tests
 
-### ⚠️ Known Issues (fixed in 0.1.4)
+### ⚠️ Known Issues (fixed in 0.2.1)
 
 * Incorrect indentation handling
 * Emoji spacing issues
@@ -104,7 +104,7 @@ MAJOR.MINOR.PATCH
 
 # 🚀 **Upcoming Roadmap**
 
-### **Planned for 0.2.x**
+### **Planned for 0.3.x**
 
 * Windows PowerShell support
 * Custom file templates
