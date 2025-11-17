@@ -13,7 +13,7 @@ long_description = README.read_text(encoding="utf-8") if README.exists() else ""
 
 setup(
     name="tree2cmd",
-    version="0.2.1",  # ⚠ Must match pyproject.toml, or use dynamic versioning
+    version="0.4.2",  # ⚠ Must match pyproject.toml, or use dynamic versioning
     description="Convert text-based folder tree structures into real directories and files.",
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -1,3 +1,4 @@
+
 # 📝 **Changelog – tree2cmd**
 
 This document tracks all notable changes to **tree2cmd**.
@@ -13,57 +14,93 @@ MAJOR.MINOR.PATCH
 
 ---
 
-## 🟢 **0.2.1 – (Current Release)**
-
-**Status:** *In development*
+## 🟢 **0.4.2 – Latest Release**
 
 ### ✨ Added
 
-* New `parser.py` module with clean, stable parser
-* New industry-standard project structure
-* Full documentation system under `docs/`
-* Added `usage.md`, `cli.md`, `parser.md`, `api.md`, `faq.md`, `contributing.md`, `changelog.md`
-* Added `examples/` folder with struct files
-* Added `scripts/` folder for automated builds
-* Added integration test layout
-* Emoji and Unicode folder name handling
-* Proper folder/file detection
-* Consistent indentation parsing
-* Improved CLI logging
-* Clean path normalization
-* Deduplicated mkdir/touch commands
-* New `tree` mode to visualize output commands
+* Fully stable parser with improved whitespace and indent detection
+* Cleaner CLI output with color and emoji-safe text handling
+* Improved command normalization (`mkdir` / `touch`)
+* Added automatic versioning workflows (`bump`, `publish`, `python_tests`)
+* New GitHub Action badges and CI/CD workflow consistency
+* Added filtering/log extraction scripts
 
 ### 🛠 Fixed
 
-* Incorrect indent detection in older versions
-* Emoji spacing bug (`📦 App` became `📦App`)
-* Missing parent folder creation
-* Inconsistent folder detection
-* Broken stack logic for nested directories
-* Tree symbols removing valid characters
-* Incorrect behavior for inconsistent indentation
-* Duplicate directory creation
+* Fixed incorrect directory stack behavior
+* Fixed missing parent directory creation in deeper nesting
+* Fixed unicode/emoji spacing stripping
+* Fixed duplicate tag pushes breaking PyPI deploy workflow
+* Resolved GitHub workflow YAML syntax errors
+
+### 🔧 Improved
+
+* Code thoroughly formatted using **Black**
+* Updated test suite for Python `3.8 → 3.12`
+* More robust path resolution logic
+* Better error messaging in CLI
 
 ---
 
-## 🟢 **0.2.1**
+## 🟢 **0.4.1**
 
 ### ✨ Added
 
-* Initial PyPI-ready formatting
-* Basic parser (early version)
-* Handling of tree characters
+* Improved PyPI metadata
+* Internal cleanup after tag collision issues
+* More stable wheel + sdist build
+
+### 🛠 Fixed
+
+* Fix GitHub push-protection token leak false positives
+* Fixed incorrect bump2version message format
+
+---
+
+## 🟢 **0.4.0**
+
+### ✨ Added
+
+* Major parser rewrite for consistency & correctness
+* Restored full Unicode support (emoji, accented chars)
+* Better CLI UX with structured messages
+
+### 🛠 Fixed
+
+* "File already exists" error due to reused build artifacts
+* Many indentation & tree-symbol parsing issues
+
+---
+
+## 🟢 **0.2.4 → 0.2.5 (Pre-Rewrite Stabilization)**
+
+### ✨ Added
+
+* Added basic CI cleanup scripts
+* Started introducing automated workflows
+
+### 🛠 Fixed
+
+* Multiple formatting issues detected by Black
+* Early CLI inconsistencies
+
+---
+
+## 🟢 **0.2.1 (Original Public Release)**
+
+### ✨ Added
+
+* Basic parser implementation
 * CLI improvements
-* Basic tests
+* Initial documentation (`usage`, `cli`, `parser`, etc.)
+* `examples/` and `scripts/` directories
 
-### ⚠️ Known Issues (fixed in 0.2.1)
+### 🛠 Fixed
 
-* Incorrect indentation handling
-* Emoji spacing issues
-* Folder/file misclassification
-* Incorrect path joining
-* Deeply nested structures fail
+* Incorrect indentation logic
+* Emoji spacing bug (`📦 App` → `📦App`)
+* Incorrect folder/file detection
+* Broken nested directory logic
 
 ---
 
@@ -72,12 +109,11 @@ MAJOR.MINOR.PATCH
 ### ✨ Added
 
 * Added stdin support
-* Basic debug logs
-* Early folder parsing
+* Debug log support
 
 ### 🛠 Fixed
 
-* Some minor normalization bugs
+* Minor normalization bugs
 
 ---
 
@@ -85,9 +121,8 @@ MAJOR.MINOR.PATCH
 
 ### ✨ Added
 
-* Initial code upload
 * Basic CLI
-* folder detection heuristics
+* First tree parser heuristic
 
 ---
 
@@ -95,28 +130,31 @@ MAJOR.MINOR.PATCH
 
 ### ✨ Added
 
-* Basic implementation of tree-to-commands
-* Support for visual tree symbols
+* Prototype “tree-to-commands” engine
+* Support for Unicode tree symbols
 * Minimal indentation detection
-* mkdir/touch generation
+* Basic mkdir/touch generation
 
 ---
 
-# 🚀 **Upcoming Roadmap**
+# 🚀 **Upcoming Roadmap (0.5.x / 1.0.x)**
 
-### **Planned for 0.3.x**
+### Planned Features
 
-* Windows PowerShell support
-* Custom file templates
-* Ability to ignore certain nodes
-* Support for multiple roots in one struct file
-* YAML/JSON output mode
+* Windows PowerShell command output
+* User-configurable file templates
+* Ignorable nodes (`.treeignore`)
+* Multi-root struct-file support
+* YAML/JSON export support
+* Interactive web version of `tree2cmd`
 
 ---
 
-# 🔗 See Also
+# 🔗 **See Also**
 
-* **[CLI Reference](cli.md)**
-* **[Parser Internals](parser.md)**
-* **[Usage Guide](usage.md)**
-* **[Contribution Guide](contributing.md)**
+* **CLI Reference** – `cli.md`
+* **Parser Internals** – `parser.md`
+* **Usage Guide** – `usage.md`
+* **Contribution Guide** – `contributing.md`
+
+

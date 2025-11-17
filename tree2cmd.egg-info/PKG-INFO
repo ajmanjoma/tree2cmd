@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: tree2cmd
-Version: 0.2.3
+Version: 0.4.1
 Summary: Convert text directory trees (struct.txt) into real folders and files.
 Home-page: https://github.com/ajmanjoma/tree2cmd
 Author: Antony Joseph Mathew
@@ -106,8 +106,8 @@ Dynamic: requires-python
   </a>
 
   <!-- GitHub Actions: TestPyPI -->
-  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml">
-    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/testpypi.yml/badge.svg" alt="Publish to TestPyPI">
+  <a href="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tree2cmd_publish_test.yml">
+    <img src="https://github.com/ajmanjoma/tree2cmd/actions/workflows/tree2cmd_publish_test.yml/badge.svg" alt="Publish to TestPyPI">
   </a>
 
   <!-- GitHub Actions: PyPI Publish -->
