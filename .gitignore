@@ -21,3 +21,5 @@ build/
 # IDE folders
 .vscode/
 .idea/
+filtered_logs.txt
+full_logs.txt
